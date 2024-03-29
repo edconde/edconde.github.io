@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <url>
+        <loc>https://edconde.github.io/</loc>
+        <lastmod>2024-03-29</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://edconde.github.io/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://edconde.github.io/es/"/>
+    </url>
+    <url>
+        <loc>https://edconde.github.io/cv/</loc>
+        <lastmod>2024-03-29</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://edconde.github.io/cv/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://edconde.github.io/es/cv/"/>
+    </url>
+    <url>
+        <loc>https://edconde.github.io/projects/aspa/</loc>
+        <lastmod>2024-03-29</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://edconde.github.io/projects/aspa/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://edconde.github.io/es/projects/aspa/"/>
+    </url>
+    <url>
+        <loc>https://edconde.github.io/projects/basketball-player-recommender/</loc>
+        <lastmod>2024-03-29</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://edconde.github.io/projects/basketball-player-recommender/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://edconde.github.io/es/projects/basketball-player-recommender/"/>
+    </url>
+    <url>
+        <loc>https://edconde.github.io/projects/moubil/</loc>
+        <lastmod>2024-03-29</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://edconde.github.io/projects/moubil/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://edconde.github.io/es/projects/moubil/"/>
+    </url>
+    <url>
+        <loc>https://edconde.github.io/es/</loc>
+        <lastmod>2024-03-29</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://edconde.github.io/es/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://edconde.github.io/"/>
+    </url>
+    <url>
+        <loc>https://edconde.github.io/es/cv/</loc>
+        <lastmod>2024-03-29</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://edconde.github.io/es/cv/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://edconde.github.io/cv/"/>
+    </url>
+    <url>
+        <loc>https://edconde.github.io/es/projects/aspa/</loc>
+        <lastmod>2024-03-29</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://edconde.github.io/es/projects/aspa/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://edconde.github.io/projects/aspa/"/>
+    </url>
+    <url>
+        <loc>https://edconde.github.io/es/projects/basketball-player-recommender/</loc>
+        <lastmod>2024-03-29</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://edconde.github.io/es/projects/basketball-player-recommender/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://edconde.github.io/projects/basketball-player-recommender/"/>
+    </url>
+    <url>
+        <loc>https://edconde.github.io/es/projects/moubil/</loc>
+        <lastmod>2024-03-29</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://edconde.github.io/es/projects/moubil/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://edconde.github.io/projects/moubil/"/>
+    </url>
+</urlset>

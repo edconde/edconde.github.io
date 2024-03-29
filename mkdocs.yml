@@ -1,0 +1,38 @@
+site_name: edconde's portfolio
+site_author: edconde
+site_description: edconde's portfolio & projects showcase site.
+site_url: https://edconde.github.io
+# we deploy in github pages, so we need to set the site_dir to docs
+site_dir: docs
+docs_dir: mkdocs-src
+#repo_name: edconde/edconde.github.io
+#repo_url: https://github.com/edconde/edconde.github.io
+theme:
+  name: dracula
+  logo: assets/img/logo.jpg
+  favicon: assets/img/icons8-resume-96.png
+  locale: en
+plugins:
+  - i18n:
+      docs_structure: folder
+      languages:
+        - locale: en
+          default: true
+          name: English
+          build: true
+        - locale: es
+          name: Español
+          build: true
+          nav_translations:
+            HOME: INICIO
+            PROJECTS: PROYECTOS
+            CV (deprecated): CV (obsoleto)
+
+nav:
+  - 'HOME': 'en/index.md'
+  - 'CV': 'en/cv/index.md'
+  - 'CV (deprecated)': 'assets/cv-site/index.html'
+  - 'PROJECTS':
+    - 'mOUbil': 'en/projects/moubil/index.md'
+    - 'BPR': 'en/projects/basketball-player-recommender/index.md'
+    - 'ASPA': 'en/projects/aspa/index.md'
