@@ -1,3 +1,3 @@
-# Home Page
+# 🏠 Home Page
 ---
 ## Coming soon...

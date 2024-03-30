@@ -1,4 +1,4 @@
-# Projects 💻
+# 💻 Projects
 ---
 Some of the projects I have worked on are listed below.<br>
 Click 👇 on the links for more information about each project:

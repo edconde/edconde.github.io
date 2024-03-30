@@ -1,3 +1,3 @@
-# Inicio
+# 🏠 Inicio
 ---
 ## Coming soon...
