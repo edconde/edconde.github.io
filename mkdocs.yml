@@ -1,4 +1,5 @@
 site_name: edconde's portfolio
+copyright: Copyright &copy; 2024 Edgar Conde
 site_author: edconde
 site_description: edconde's portfolio & projects showcase site.
 site_url: https://edconde.github.io
@@ -7,12 +8,61 @@ site_dir: docs
 docs_dir: mkdocs-src
 repo_name: edconde/edconde.github.io
 repo_url: https://github.com/edconde/edconde.github.io
+
 theme:
   name: material
   logo: assets/img/logo.jpg
   favicon: assets/img/icons8-resume-96.png
-  locale: en
+  icon:
+    previous: fontawesome/solid/angle-left
+    next: fontawesome/solid/angle-right
+  language: en
+  palette:
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      accent: deep-orange
+      toggle:
+        icon: material/weather-night 
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: deep-orange
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  font:
+    text: Roboto
+    code: Roboto Mono
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.prune
+    - navigation.indexes
+    - navigation.top
+    # - navigation.footer
+    - toc.follow
+    - toc.integrate
+    - search.suggest
+    - search.highlight
+    - search.share
+
+extra: 
+  generator: false
+  social:
+    - icon: fontawesome/brands/github
+      link: https://edconde.github.io
+
 plugins:
+  - search
   - i18n:
       docs_structure: folder
       languages:
@@ -24,15 +74,18 @@ plugins:
           name: Español
           build: true
           nav_translations:
-            HOME: INICIO
-            PROJECTS: PROYECTOS
-            CV (deprecated): CV (obsoleto)
+            🏠 Home: 🏠 Inicio
+            💻 Projects: 💻 Proyectos
+            ⚠️ CV (deprecated): ⚠️ CV (obsoleto)
+            🖋️ Attributions: 🖋️ Atribuciones
 
 nav:
-  - 'HOME': 'en/index.md'
-  - 'CV': 'en/cv/index.md'
-  - 'CV (deprecated)': 'assets/cv-site/index.html'
-  - 'PROJECTS':
-    - 'mOUbil': 'en/projects/moubil/index.md'
-    - 'BPR': 'en/projects/basketball-player-recommender/index.md'
-    - 'ASPA': 'en/projects/aspa/index.md'
+  - '🏠 Home': 'en/index.md'
+  - '📄 CV': 'en/cv/index.md'
+  - '⚠️ CV (deprecated)': 'en/cv/index-old.md'
+  - '💻 Projects':
+    - 'en/projects/index.md'
+    - '📱mOUbil': 'en/projects/moubil/index.md'
+    - '🏀 BPR': 'en/projects/basketball-player-recommender/index.md'
+    - '🏃‍♀️ ASPA': 'en/projects/aspa/index.md'
+  - '🖋️ Attributions': 'en/attributions/index.md'

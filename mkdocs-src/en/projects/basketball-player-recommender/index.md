@@ -1,3 +1,3 @@
-# Basketball Player Recommender
----------
+# Basketball Player Recommender 🏀
+---
 ## Coming soon...

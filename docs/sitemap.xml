@@ -8,11 +8,32 @@
         <xhtml:link rel="alternate" hreflang="es" href="https://edconde.github.io/es/"/>
     </url>
     <url>
+        <loc>https://edconde.github.io/attributions/</loc>
+        <lastmod>2024-03-30</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://edconde.github.io/attributions/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://edconde.github.io/es/attributions/"/>
+    </url>
+    <url>
         <loc>https://edconde.github.io/cv/</loc>
         <lastmod>2024-03-30</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://edconde.github.io/cv/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://edconde.github.io/es/cv/"/>
+    </url>
+    <url>
+        <loc>https://edconde.github.io/cv/index-old/</loc>
+        <lastmod>2024-03-30</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://edconde.github.io/cv/index-old/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://edconde.github.io/es/cv/index-old/"/>
+    </url>
+    <url>
+        <loc>https://edconde.github.io/projects/</loc>
+        <lastmod>2024-03-30</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://edconde.github.io/projects/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://edconde.github.io/es/projects/"/>
     </url>
     <url>
         <loc>https://edconde.github.io/projects/aspa/</loc>
@@ -43,11 +64,32 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://edconde.github.io/"/>
     </url>
     <url>
+        <loc>https://edconde.github.io/es/attributions/</loc>
+        <lastmod>2024-03-30</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://edconde.github.io/es/attributions/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://edconde.github.io/attributions/"/>
+    </url>
+    <url>
         <loc>https://edconde.github.io/es/cv/</loc>
         <lastmod>2024-03-30</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://edconde.github.io/es/cv/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://edconde.github.io/cv/"/>
+    </url>
+    <url>
+        <loc>https://edconde.github.io/es/cv/index-old/</loc>
+        <lastmod>2024-03-30</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://edconde.github.io/es/cv/index-old/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://edconde.github.io/cv/index-old/"/>
+    </url>
+    <url>
+        <loc>https://edconde.github.io/es/projects/</loc>
+        <lastmod>2024-03-30</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://edconde.github.io/es/projects/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://edconde.github.io/projects/"/>
     </url>
     <url>
         <loc>https://edconde.github.io/es/projects/aspa/</loc>
