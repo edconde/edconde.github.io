@@ -1,4 +1,4 @@
-# ASPA: Aplicación para el Seguimiento de Pruebas de Atletismo
+# 🏃‍♀️ ASPA: Aplicación para el Seguimiento de Pruebas de Atletismo
 ---
 Proyecto que consiste principalmente en una aplicación web optimizada para tabletas, destinada a ser utilizada por jueces de atletismo para cubrir las hojas de campo de las pruebas, gestionar competiciones, inscripciones, etc.
 
