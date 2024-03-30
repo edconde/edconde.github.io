@@ -6,8 +6,8 @@ site_url: https://edconde.github.io
 # we deploy in github pages, so we need to set the site_dir to docs
 site_dir: docs
 docs_dir: mkdocs-src
-repo_name: edconde/edconde.github.io
-repo_url: https://github.com/edconde/edconde.github.io
+repo_name: github.com/edconde
+repo_url: https://github.com/edconde
 
 theme:
   name: material
