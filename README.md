@@ -13,10 +13,8 @@ It has two purposes:
 ### Prerrequisites
 
 - Install python and then mkdocs by executing ```pip install mkdocs```.
-
-- Install plugins for i18 and for the theme you want to use, in this case Dracula:
-    - https://ultrabug.github.io/mkdocs-static-i18n/getting-started/installation/
-    - https://github.com/dracula/mkdocs
+- Install i18n plugin for mkdocs by executing ```pip install mkdocs-static-i18n``` https://ultrabug.github.io/mkdocs-static-i18n/getting-started/installation/.
+- Install material theme for mkdocs by executing ```pip install mkdocs-material``` https://squidfunk.github.io/mkdocs-material/.
 
 ### Writting content
 
