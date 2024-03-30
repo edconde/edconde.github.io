@@ -7,7 +7,7 @@ In addition, as part of the project, there is also a small mobile application th
 **Technologies:** `MySQL`, `Spring Boot`, `Angular` & `Ionic`
 
 <a href="https://github.com/edconde/aspa">
-  <img src="../../../assets/img/tools/github.png" alt="" width="36" height="36">
+  <img src="../../../assets/img/brands/github.png" alt="" width="36" height="36">
 </a>
 [Github repo](https://github.com/edconde/aspa)
 <br>

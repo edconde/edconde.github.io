@@ -22,11 +22,25 @@
         <xhtml:link rel="alternate" hreflang="es" href="https://edconde.github.io/es/cv/"/>
     </url>
     <url>
-        <loc>https://edconde.github.io/cv/index-old/</loc>
+        <loc>https://edconde.github.io/cv/education/</loc>
         <lastmod>2024-03-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://edconde.github.io/cv/index-old/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://edconde.github.io/es/cv/index-old/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://edconde.github.io/cv/education/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://edconde.github.io/es/cv/education/"/>
+    </url>
+    <url>
+        <loc>https://edconde.github.io/cv/experience/</loc>
+        <lastmod>2024-03-30</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://edconde.github.io/cv/experience/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://edconde.github.io/es/cv/experience/"/>
+    </url>
+    <url>
+        <loc>https://edconde.github.io/cv/training/</loc>
+        <lastmod>2024-03-30</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://edconde.github.io/cv/training/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://edconde.github.io/es/cv/training/"/>
     </url>
     <url>
         <loc>https://edconde.github.io/projects/</loc>
@@ -78,11 +92,25 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://edconde.github.io/cv/"/>
     </url>
     <url>
-        <loc>https://edconde.github.io/es/cv/index-old/</loc>
+        <loc>https://edconde.github.io/es/cv/education/</loc>
         <lastmod>2024-03-30</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://edconde.github.io/es/cv/index-old/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://edconde.github.io/cv/index-old/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://edconde.github.io/es/cv/education/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://edconde.github.io/cv/education/"/>
+    </url>
+    <url>
+        <loc>https://edconde.github.io/es/cv/experience/</loc>
+        <lastmod>2024-03-30</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://edconde.github.io/es/cv/experience/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://edconde.github.io/cv/experience/"/>
+    </url>
+    <url>
+        <loc>https://edconde.github.io/es/cv/training/</loc>
+        <lastmod>2024-03-30</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://edconde.github.io/es/cv/training/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://edconde.github.io/cv/training/"/>
     </url>
     <url>
         <loc>https://edconde.github.io/es/projects/</loc>

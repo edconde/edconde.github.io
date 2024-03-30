@@ -75,14 +75,20 @@ plugins:
           build: true
           nav_translations:
             🏠 Home: 🏠 Inicio
+            📄 CV: 📄 CV
+            💼 Experience: 💼 Experiencia
+            🎓 Education: 🎓 Estudios
+            🏅 Certifications & Courses: 🏅 Certificaciones y Cursos
             💻 Projects: 💻 Proyectos
-            ⚠️ CV (deprecated): ⚠️ CV (obsoleto)
             🖋️ Attributions: 🖋️ Atribuciones
 
 nav:
   - '🏠 Home': 'en/index.md'
-  - '📄 CV': 'en/cv/index.md'
-  - '⚠️ CV (deprecated)': 'en/cv/index-old.md'
+  - '📄 CV':
+    - 'en/cv/index.md'
+    - '💼 Experience': 'en/cv/experience/index.md'
+    - '🎓 Education': 'en/cv/education/index.md'
+    - '🏅 Certifications & Courses': 'en/cv/training/index.md'
   - '💻 Projects':
     - 'en/projects/index.md'
     - '📱mOUbil': 'en/projects/moubil/index.md'
