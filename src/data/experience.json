@@ -1,0 +1,69 @@
+{
+  "experiences": [
+    {
+      "company": "DEPARTAMENTO DE INNOVACIÓN, TECNOLOGÍA E IA DEL CONCELLO DE OURENSE",
+      "position": "INGENIERO SENIOR DE DATOS Y SOFTWARE",
+      "period": "Mayo 2022 - Presente",
+      "location": "Ourense, España",
+      "description": "Creación de Sistemas de Información y Aplicaciones, desde la toma de requisitos hasta la puesta en producción.",
+      "technologies": ["Data Engineering", "Software Engineering", "IA", "Innovación"],
+      "funciones": [
+        "Desarrollo de sistemas de información integrales",
+        "Implementación de soluciones innovadoras",
+        "Gestión de proyectos de tecnología"
+      ]
+    },
+    {
+      "company": "ODEENE INGENIERÍA",
+      "position": "INGENIERO DE SOFTWARE",
+      "period": "Agosto 2019 - Abril 2022",
+      "location": "España",
+      "description": "Miembro del equipo de análisis y desarrollo de Servicios API de ABANCA (Sector banca). Diseño y construcción de un framework de desarrollo de APIs con .NET Framework, C#. Análisis e implementación de las APIs de la banca online web y móvil del banco. Desarrollo web front-end con Angular.",
+      "technologies": [".NET Framework", "C#", "Angular", "API Development"],
+      "funciones": [
+        "Diseño y construcción de framework de APIs",
+        "Desarrollo de APIs para banca online",
+        "Implementación de soluciones front-end"
+      ]
+    },
+    {
+      "company": "ODEENE INGENIERÍA",
+      "position": "DESARROLLADOR DE SOFTWARE",
+      "period": "Enero 2019 - Agosto 2019",
+      "location": "España",
+      "description": "Desarrollo del front-end de aplicaciones web con Angular. Sector banca (ABANCA).",
+      "technologies": ["Angular", "TypeScript", "HTML", "CSS"],
+      "funciones": [
+        "Desarrollo de interfaces de usuario",
+        "Integración con APIs bancarias",
+        "Optimización del rendimiento front-end"
+      ]
+    },
+    {
+      "company": "VIEWNEXT, AN IBM SUBSIDIARY",
+      "position": "DESARROLLADOR DE SOFTWARE",
+      "period": "Enero 2018 - Enero 2019",
+      "location": "España",
+      "description": "Desarrollo de software con framework JAVA basado en Struts. Sector banca (Caixabank, LaCaixa).",
+      "technologies": ["Java", "Struts", "SQL", "Banking Software"],
+      "funciones": [
+        "Desarrollo de aplicaciones bancarias",
+        "Mantenimiento de sistemas críticos",
+        "Integración de servicios bancarios"
+      ]
+    },
+    {
+      "company": "VIEWNEXT, AN IBM SUBSIDIARY",
+      "position": "DESARROLLADOR DE SOFTWARE - PRÁCTICAS",
+      "period": "Septiembre 2017 - Diciembre 2017",
+      "location": "España",
+      "description": "Desarrollo web Full Stack con Spring, JavaScript, CSS. Sector retail (INDITEX).",
+      "technologies": ["Spring", "JavaScript", "CSS", "Full Stack"],
+      "funciones": [
+        "Desarrollo de aplicaciones web completas",
+        "Implementación de funcionalidades retail",
+        "Trabajo en equipo en proyectos reales"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "education": [
+    {
+      "degree": "MÁSTER EN ANÁLISIS Y VISUALIZACIÓN DE BIG DATA",
+      "institution": "UNIVERSIDAD INTERNACIONAL DE LA RIOJA",
+      "period": "2020 - 2022",
+      "field": "Ciencia de Datos y Tecnologías de la Información",
+      "thesis": {
+        "title": "Sistema recomendador de jugadores de baloncesto complementarios",
+        "link": "https://github.com/edconde/basketball-player-recommender#readme",
+        "projectLink": null
+      }
+    },
+    {
+      "degree": "GRADO EN INGENIERÍA INFORMÁTICA",
+      "institution": "UNIVERSIDAD DE VIGO",
+      "period": "2013 - 2018",
+      "field": "Ciencias de la Computación y la Información - Mención en Ingeniería de Software",
+      "thesis": {
+        "title": "Aplicación para el Seguimiento de Pruebas de Atletismo",
+        "link": "https://github.com/edconde/aspa#readme",
+        "projectLink": "portfolio.html#aspa"
+      }
+    }
+  ],
+  "certifications": [
+    {
+      "title": "Curso de Programación en Python",
+      "institution": "Universidad Internacional de La Rioja",
+      "year": "2021"
+    },
+    {
+      "title": "Python 3.X",
+      "institution": "Udemy",
+      "year": "2020"
+    },
+    {
+      "title": "Desarrollo de Soluciones con Machine Learning",
+      "institution": "Vitae Consultores",
+      "year": "2019"
+    },
+    {
+      "title": "Learn Angular from scratch",
+      "institution": "Udemy",
+      "year": "2018"
+    },
+    {
+      "title": "Introducción al Paralelismo",
+      "institution": "Centro de Supercomputación de Galicia (CESGA)",
+      "year": "2017"
+    }
+  ]
+}
