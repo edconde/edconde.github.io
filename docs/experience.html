@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/jpeg" href="assets/img/logo.jpg">
     <title>Experiencia Laboral - Ingeniero de Software</title>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -29,7 +29,8 @@
                         </a>
                     </div>
                 </div>
-                <div class="flex items-center space-x-4">
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-4">
                     <a href="experience.html" class="nav-link py-4 px-2 text-gray-500 dark:text-gray-300 font-medium">Experiencia</a>
                     <a href="education.html" class="nav-link py-4 px-2 text-gray-500 dark:text-gray-300 font-medium">Formación</a>
                     <a href="portfolio.html" class="nav-link py-4 px-2 text-gray-500 dark:text-gray-300 font-medium">Portfolio</a>
@@ -37,6 +38,21 @@
                         <i class="fas fa-moon text-gray-500 dark:text-gray-400" id="theme-toggle-icon"></i>
                     </button>
                 </div>
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+                        <i class="fas fa-bars text-gray-500 dark:text-gray-400 text-xl"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <a href="experience.html" class="block py-2 px-4 text-gray-500 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg">Experiencia</a>
+                <a href="education.html" class="block py-2 px-4 text-gray-500 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg">Formación</a>
+                <a href="portfolio.html" class="block py-2 px-4 text-gray-500 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg">Portfolio</a>
+                <button id="theme-toggle-mobile" class="w-full text-left py-2 px-4 text-gray-500 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg">
+                    <i class="fas fa-moon mr-2"></i> Cambiar tema
+                </button>
             </div>
         </div>
     </nav>

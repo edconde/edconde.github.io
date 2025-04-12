@@ -1,6 +1,9 @@
 document.addEventListener('DOMContentLoaded', async () => {
     // Inicializar el tema primero para evitar parpadeos
     initializeTheme();
+    
+    // Inicializar el menú móvil
+    initializeMobileMenu();
 
     const pathname = window.location.pathname;
     updateActiveNavLink(pathname);
@@ -19,6 +22,33 @@ document.addEventListener('DOMContentLoaded', async () => {
         console.error('Error loading content:', error);
     }
 });
+
+function initializeMobileMenu() {
+    const menuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const themeToggleMobile = document.getElementById('theme-toggle-mobile');
+
+    menuButton.addEventListener('click', () => {
+        const isHidden = mobileMenu.classList.contains('hidden');
+        if (isHidden) {
+            mobileMenu.classList.remove('hidden');
+            menuButton.querySelector('i').classList.remove('fa-bars');
+            menuButton.querySelector('i').classList.add('fa-times');
+        } else {
+            mobileMenu.classList.add('hidden');
+            menuButton.querySelector('i').classList.remove('fa-times');
+            menuButton.querySelector('i').classList.add('fa-bars');
+        }
+    });
+
+    // Sincronizar el cambio de tema con el botón principal
+    themeToggleMobile.addEventListener('click', () => {
+        document.getElementById('theme-toggle').click();
+        const isDark = document.documentElement.classList.contains('dark');
+        themeToggleMobile.querySelector('i').classList.toggle('fa-sun', isDark);
+        themeToggleMobile.querySelector('i').classList.toggle('fa-moon', !isDark);
+    });
+}
 
 function updateActiveNavLink(pathname) {
     const navLinks = document.querySelectorAll('.nav-link');
