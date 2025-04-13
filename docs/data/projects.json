@@ -6,6 +6,8 @@
       "description": "Proyecto que consiste principalmente en una aplicación web optimizada para tabletas, destinada a ser utilizada por jueces de atletismo para cubrir las hojas de campo de las pruebas, gestionar competiciones, inscripciones, etc. Además, como parte del proyecto, también hay una pequeña aplicación móvil que permite a los usuarios atletas inscribirse en competiciones y consultar sus resultados.",
       "technologies": ["MySQL", "Spring Boot", "Angular", "Ionic"],
       "githubUrl": "https://github.com/edconde/aspa",
+      "startYear": 2019,
+      "endYear": 2020,
       "demos": {
         "web": [
           {

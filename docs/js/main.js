@@ -200,11 +200,16 @@ async function loadProjects() {
             const projectCard = `
                 <div class="card rounded-lg shadow-md overflow-hidden dark:bg-gray-800" data-aos="fade-up" data-aos-delay="${index * 100}">
                     <div class="p-6">
-                        <div class="flex items-start gap-4 mb-4">
+                        <div class="flex items-start gap-4 mb-2">
                             ${project.icon ? `
                                 <i class="${project.icon} text-3xl text-indigo-600 dark:text-indigo-400"></i>
                             ` : ''}
-                            <h3 class="text-xl font-bold text-gray-900 dark:text-white">${project.name}</h3>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-1">${project.name}</h3>
+                                <p class="text-gray-600 dark:text-gray-400 text-sm">
+                                    <i class="fas fa-calendar mr-2"></i>${project.startYear}${project.endYear ? ` - ${project.endYear}` : ' - Presente'}
+                                </p>
+                            </div>
                         </div>
                         <p class="text-gray-800 dark:text-gray-300 mb-4 leading-relaxed">${project.description}</p>
                         
@@ -268,6 +273,17 @@ async function loadProjects() {
     }
 }
 
+function getGreetingByTime() {
+    const hour = new Date().getHours();
+    if (hour >= 6 && hour < 12) {
+        return '¡Buenos días!';
+    } else if (hour >= 12 && hour < 20) {
+        return '¡Buenas tardes!';
+    } else {
+        return '¡Buenas noches!';
+    }
+}
+
 async function loadProfile() {
     try {
         const response = await fetch('data/profile.json');
@@ -279,7 +295,7 @@ async function loadProfile() {
         // Update hero section content
         const heroContent = document.querySelector('.hero-section .text-white');
         heroContent.innerHTML = `
-            <h1 class="text-4xl md:text-5xl font-bold mb-6">¡Hola! Soy ${data.name}</h1>
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">${getGreetingByTime()}</h1>
             <p class="text-xl mb-8 opacity-90">${data.description}</p>
             <div class="flex space-x-6 mb-8">
                 <a href="${data.social.github}" target="_blank" rel="noopener noreferrer" 
