@@ -1,2 +1,4 @@
 # edconde.github.io
-Página estática con información y listado de proyectos.
+Sitio web personal.
+
+[http](https://edconde.github.io/)
