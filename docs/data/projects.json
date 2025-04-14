@@ -4,25 +4,27 @@
       "name": "Basketball Player Recommender",
       "name_en": "Basketball Player Recommender",
       "icon": "fas fa-basketball",
-      "description": "Sistema de recomendación de pares de jugadores NBA complementarios para la temporada 2020-2021, utilizando datos de partidos de 2015 a 2020.",
-      "description_en": "NBA player pair recommendation system for the 2020-2021 season, using game data from 2015 to 2020.",
+      "description": "Sistema de recomendación de pares de jugadores NBA complementarios para la temporada 2020-2021, utilizando datos jugada-a-jugada de partidos desde 2015 a 2020. Previamente se clasifica a los jugadores en tipos mediante técnicas de clustering, según sus atributos (obtenidos mediante web scraping de 2kratings.com).",
+      "description_en": "NBA player pair recommendation system for the 2020-2021 season, using game data from 2015 to 2020. Players are first classified into types using clustering techniques, based on their attributes (obtained through web scraping from 2kratings.com).",
       "technologies": ["Python", "Pandas", "Scikit-learn", "MongoDB", "NodeJS", "Angular"],
       "githubUrl": "https://github.com/edconde/basketball-player-recommender",
       "websiteUrl": "https://edconde.github.io/basketball-player-recommender",
       "startYear": 2021,
-      "endYear": 2022
+      "endYear": 2022,
+      "showDemos": false
     },
     {
       "name": "ASPA: Aplicación para el Seguimiento de Pruebas de Atletismo",
       "name_en": "ASPA: Athletic Event Tracking Application",
       "icon": "fas fa-person-running",
-      "description": "Proyecto que consiste principalmente en una aplicación web optimizada para tabletas, destinada a ser utilizada por jueces de atletismo para cubrir las hojas de campo de las pruebas, gestionar competiciones, inscripciones, etc. Además, como parte del proyecto, también hay una pequeña aplicación móvil que permite a los usuarios atletas inscribirse en competiciones y consultar sus resultados.",
-      "description_en": "Project consisting mainly of a web application optimized for tablets, designed to be used by athletics judges to fill out field event sheets, manage competitions, registrations, etc. Additionally, as part of the project, there is also a small mobile application that allows athlete users to register for competitions and check their results.",
+      "description": "Aplicación web optimizada para tabletas, destinada a ser utilizada por jueces de atletismo para cubrir las hojas de campo de las pruebas, gestionar competiciones, inscripciones, etc. Además, como parte del proyecto, también hay una pequeña aplicación móvil que permite a los usuarios atletas inscribirse en competiciones y consultar sus resultados.",
+      "description_en": "Web application optimized for tablets, designed to be used by athletics judges to fill out field event sheets, manage competitions, registrations, etc. Additionally, as part of the project, there is also a small mobile application that allows athlete users to register for competitions and check their results.",
       "technologies": ["MySQL", "Spring Boot", "Angular", "Ionic"],
       "githubUrl": "https://github.com/edconde/aspa",
       "websiteUrl": "https://edconde.github.io/aspa",
       "startYear": 2017,
       "endYear": 2018,
+      "showDemos": false,
       "demos": {
         "web": [
           {

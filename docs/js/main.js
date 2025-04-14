@@ -340,7 +340,7 @@ async function loadProjects() {
                             ` : ''}
                         </div>
 
-                        ${project.demos ? `
+                        ${project.showDemos && project.demos ? `
                             <div class="space-y-6">
                                 ${project.demos.web ? `
                                     <div>
