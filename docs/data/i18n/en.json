@@ -1,0 +1,48 @@
+{
+  "navigation": {
+    "home": "Home",
+    "experience": "Experience",
+    "education": "Education",
+    "portfolio": "Portfolio",
+    "changeTheme": "Change theme"
+  },
+  "greetings": {
+    "morning": "Good morning!",
+    "afternoon": "Good afternoon!",
+    "evening": "Good evening!"
+  },
+  "headers": {
+    "professionalPath": "Professional Path",
+    "professionalPathDesc": "My experience in both private organizations and public administration.",
+    "education": "Education and continuous learning",
+    "educationDesc": "A summary of my academic background and relevant courses I've taken throughout my career.",
+    "portfolio": "Portfolio",
+    "portfolioDesc": "Projects I have developed or been part of, and what I'm currently working on."
+  },
+  "sections": {
+    "formalEducation": "Formal Education",
+    "certifications": "Certifications and Courses",
+    "mainFunctions": "Main Functions:",
+    "finalProject": "Final Project:",
+    "viewProject": "View project",
+    "viewGithub": "View on GitHub",
+    "webDemo": "Web Demo",
+    "mobileDemo": "Mobile Demo",
+    "websiteDemo": "Website / demo"
+  },
+  "profile": {
+    "intro": "My name is Edgar, I'm a Software Engineer and this is my personal website.",
+    "experience": {
+      "title": "Professional Experience",
+      "description": "Explore my experience and professional achievements"
+    },
+    "education": {
+      "title": "Education",
+      "description": "Discover my academic background and certifications"
+    },
+    "projects": {
+      "title": "Projects",
+      "description": "Learn about the projects I've developed"
+    }
+  }
+}

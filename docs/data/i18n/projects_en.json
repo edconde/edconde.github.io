@@ -1,0 +1,62 @@
+{
+  "projects": [
+    {
+      "name": "Basketball Player Recommender",
+      "icon": "fas fa-basketball",
+      "description": "NBA player pair recommendation system for the 2020-2021 season, using game data from 2015 to 2020.",
+      "technologies": ["Python", "Pandas", "Scikit-learn", "MongoDB", "NodeJS", "Angular"],
+      "githubUrl": "https://github.com/edconde/basketball-player-recommender",
+      "websiteUrl": "https://edconde.github.io/basketball-player-recommender",
+      "startYear": 2021,
+      "endYear": 2022
+    },
+    {
+      "name": "ASPA: Athletic Event Tracking Application",
+      "icon": "fas fa-person-running",
+      "description": "Project consisting mainly of a web application optimized for tablets, designed to be used by athletics judges to fill out field event sheets, manage competitions, registrations, etc. Additionally, as part of the project, there is also a small mobile application that allows athlete users to register for competitions and check their results.",
+      "technologies": ["MySQL", "Spring Boot", "Angular", "Ionic"],
+      "githubUrl": "https://github.com/edconde/aspa",
+      "websiteUrl": "https://edconde.github.io/aspa",
+      "startYear": 2017,
+      "endYear": 2018,
+      "demos": {
+        "web": [
+          {
+            "title": "Login + competition creation",
+            "videoUrl": "assets/video/aspa/web/1-inicio_sesion_crear_competicion.mp4"
+          },
+          {
+            "title": "Create events for a competition",
+            "videoUrl": "assets/video/aspa/web/2-crear_pruebas_competicion.mp4"
+          },
+          {
+            "title": "Register athletes + call room",
+            "videoUrl": "assets/video/aspa/web/3-inscribir_atletas_camara_llamadas.mp4"
+          },
+          {
+            "title": "Field sheet for a non-vertical jump event",
+            "videoUrl": "assets/video/aspa/web/4-hoja_campo_prueba_no_vertical.mp4"
+          },
+          {
+            "title": "Field sheet for a vertical jump event",
+            "videoUrl": "assets/video/aspa/web/5-hoja_campo_prueba_vertical.mp4"
+          },
+          {
+            "title": "Rules control and disqualifications",
+            "videoUrl": "assets/video/aspa/web/6-control_descalificaciones.mp4"
+          },
+          {
+            "title": "Help panel",
+            "videoUrl": "assets/video/aspa/web/7-panel_ayuda_usuario.mp4"
+          }
+        ],
+        "mobile": [
+          {
+            "title": "Login, event registration and results check",
+            "videoUrl": "assets/video/aspa/mobile/demo-mobile.mp4"
+          }
+        ]
+      }
+    }
+  ]
+}

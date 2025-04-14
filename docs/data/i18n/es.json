@@ -1,0 +1,48 @@
+{
+  "navigation": {
+    "home": "Inicio",
+    "experience": "Experiencia",
+    "education": "Formación",
+    "portfolio": "Portfolio",
+    "changeTheme": "Cambiar tema"
+  },
+  "greetings": {
+    "morning": "¡Buenos días!",
+    "afternoon": "¡Buenas tardes!",
+    "evening": "¡Buenas noches!"
+  },
+  "headers": {
+    "professionalPath": "Trayectoria profesional",
+    "professionalPathDesc": "Mi experiencia, tanto en organizaciones privadas como en la administración pública.",
+    "education": "Educación y formación continua",
+    "educationDesc": "Un resumen de mi formación académica y cursos relevantes que he realizado a lo largo de mi carrera.",
+    "portfolio": "Portfolio",
+    "portfolioDesc": "Proyectos que he realizado o de los que he formado parte, y en los que estoy trabajando."
+  },
+  "sections": {
+    "formalEducation": "Educación Formal",
+    "certifications": "Certificaciones y Cursos",
+    "mainFunctions": "Funciones principales:",
+    "finalProject": "Trabajo Final:",
+    "viewProject": "Ver proyecto",
+    "viewGithub": "Ver en GitHub",
+    "webDemo": "Demostración Web",
+    "mobileDemo": "Demostración Móvil",
+    "websiteDemo": "Página web / demo"
+  },
+  "profile": {
+    "intro": "Mi nombre es Edgar, soy Ingeniero de Software y ésta es mi web personal.",
+    "experience": {
+      "title": "Trayectoria Profesional",
+      "description": "Explora mi experiencia y logros profesionales"
+    },
+    "education": {
+      "title": "Formación",
+      "description": "Descubre mi formación académica y certificaciones"
+    },
+    "projects": {
+      "title": "Proyectos",
+      "description": "Conoce los proyectos que he desarrollado"
+    }
+  }
+}

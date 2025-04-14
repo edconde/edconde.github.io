@@ -1,0 +1,69 @@
+{
+  "experiences": [
+    {
+      "company": "INNOVATION, TECHNOLOGY AND AI DEPARTMENT AT OURENSE CITY COUNCIL",
+      "position": "SENIOR DATA AND SOFTWARE ENGINEER",
+      "period": "May 2022 - Present",
+      "location": "Ourense, Spain",
+      "description": "Creation of Information Systems and Applications, from requirements gathering to production deployment.",
+      "technologies": ["Data Engineering", "Software Engineering", "AI", "Innovation"],
+      "funciones": [
+        "Development of comprehensive information systems",
+        "Implementation of innovative solutions",
+        "Management of technology projects"
+      ]
+    },
+    {
+      "company": "ODEENE ENGINEERING",
+      "position": "SOFTWARE ENGINEER",
+      "period": "August 2019 - April 2022",
+      "location": "Spain",
+      "description": "Member of ABANCA's API Services analysis and development team (Banking sector). Design and construction of an API development framework with .NET Framework, C#. Analysis and implementation of web and mobile banking APIs. Front-end web development with Angular.",
+      "technologies": [".NET Framework", "C#", "Angular", "API Development"],
+      "funciones": [
+        "Design and construction of API framework",
+        "Development of online banking APIs",
+        "Implementation of front-end solutions"
+      ]
+    },
+    {
+      "company": "ODEENE ENGINEERING",
+      "position": "SOFTWARE DEVELOPER",
+      "period": "January 2019 - August 2019",
+      "location": "Spain",
+      "description": "Front-end development of web applications with Angular. Banking sector (ABANCA).",
+      "technologies": ["Angular", "TypeScript", "HTML", "CSS"],
+      "funciones": [
+        "User interface development",
+        "Integration with banking APIs",
+        "Front-end performance optimization"
+      ]
+    },
+    {
+      "company": "VIEWNEXT, AN IBM SUBSIDIARY",
+      "position": "SOFTWARE DEVELOPER",
+      "period": "January 2018 - January 2019",
+      "location": "Spain",
+      "description": "Software development with JAVA framework based on Struts. Banking sector (Caixabank, LaCaixa).",
+      "technologies": ["Java", "Struts", "SQL", "Banking Software"],
+      "funciones": [
+        "Banking applications development",
+        "Maintenance of critical systems",
+        "Integration of banking services"
+      ]
+    },
+    {
+      "company": "VIEWNEXT, AN IBM SUBSIDIARY",
+      "position": "SOFTWARE DEVELOPER - INTERNSHIP",
+      "period": "September 2017 - December 2017",
+      "location": "Spain",
+      "description": "Full Stack web development with Spring, JavaScript, CSS. Retail sector (INDITEX).",
+      "technologies": ["Spring", "JavaScript", "CSS", "Full Stack"],
+      "funciones": [
+        "Complete web applications development",
+        "Implementation of retail functionalities",
+        "Team work on real projects"
+      ]
+    }
+  ]
+}

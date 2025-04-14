@@ -1,6 +1,100 @@
+let currentTranslations = {};
+
+async function loadTranslations(lang) {
+    try {
+        const response = await fetch(`data/i18n/${lang}.json`);
+        currentTranslations = await response.json();
+        return currentTranslations;
+    } catch (error) {
+        console.error('Error loading translations:', error);
+        return null;
+    }
+}
+
+function translate(key) {
+    const keys = key.split('.');
+    let value = currentTranslations;
+    
+    for (const k of keys) {
+        if (value && value[k]) {
+            value = value[k];
+        } else {
+            console.warn(`Translation not found for key: ${key}`);
+            return key;
+        }
+    }
+    
+    return value;
+}
+
+function initializeLanguage() {
+    const languageToggleBtn = document.getElementById('language-toggle');
+    const languageToggleMobile = document.getElementById('language-toggle-mobile');
+    
+    // Obtener el idioma guardado o usar español por defecto
+    const savedLanguage = localStorage.getItem('language') || 'es';
+    
+    // Cargar las traducciones y actualizar la interfaz
+    loadTranslations(savedLanguage).then(() => {
+        updatePageContent();
+        updateLanguageButton(savedLanguage);
+    });
+
+    // Evento para cambiar el idioma
+    languageToggleBtn.addEventListener('click', async () => {
+        const currentLang = localStorage.getItem('language') || 'es';
+        const newLang = currentLang === 'es' ? 'en' : 'es';
+        
+        await loadTranslations(newLang);
+        localStorage.setItem('language', newLang);
+        updatePageContent();
+        updateLanguageButton(newLang);
+    });
+
+    // Sincronizar el cambio de idioma en el menú móvil
+    languageToggleMobile.addEventListener('click', () => {
+        languageToggleBtn.click();
+    });
+}
+
+function updateLanguageButton(lang) {
+    const languageToggleBtn = document.getElementById('language-toggle');
+    const languageToggleMobile = document.getElementById('language-toggle-mobile');
+    
+    // Actualizar botones
+    languageToggleBtn.textContent = lang === 'es' ? 'EN' : 'ES';
+    languageToggleMobile.querySelector('span').textContent = lang === 'es' ? 'Change to English' : 'Cambiar a Español';
+    
+    // Actualizar el atributo lang del HTML
+    document.documentElement.lang = lang;
+}
+
+function updatePageContent() {
+    // Actualizar elementos de navegación
+    document.querySelectorAll('[data-i18n]').forEach(element => {
+        const key = element.getAttribute('data-i18n');
+        element.textContent = translate(key);
+    });
+    
+    // Recargar el contenido dinámico de la página actual
+    const pathname = window.location.pathname;
+    if (pathname.includes('portfolio.html')) {
+        loadProjects();
+    } else if (pathname.includes('education.html')) {
+        loadEducation();
+    } else if (pathname.includes('experience.html')) {
+        loadExperience();
+    } else if (pathname.endsWith('index.html') || pathname.endsWith('/')) {
+        loadProfile();
+    }
+}
+
 document.addEventListener('DOMContentLoaded', async () => {
     // Inicializar el tema primero para evitar parpadeos
     initializeTheme();
+    
+    // Inicializar el idioma
+    initializeLanguage();
     
     // Inicializar el menú móvil
     initializeMobileMenu();
@@ -70,9 +164,12 @@ function updateActiveNavLink(pathname) {
 
 async function loadExperience() {
     try {
-        const response = await fetch('../data/experience.json');
+        const currentLang = localStorage.getItem('language') || 'es';
+        const jsonFile = currentLang === 'es' ? 'data/experience.json' : 'data/i18n/experience_en.json';
+        const response = await fetch(jsonFile);
         const data = await response.json();
         const container = document.getElementById('experience-container');
+        container.innerHTML = ''; // Limpiar el contenedor antes de agregar nuevo contenido
 
         data.experiences.forEach((exp, index) => {
             const experienceCard = `
@@ -90,7 +187,7 @@ async function loadExperience() {
                     <p class="text-gray-800 dark:text-gray-300 mb-4 leading-relaxed">${exp.description}</p>
                     <div class="mb-4">
                         <h4 class="font-semibold mb-2 text-gray-900 dark:text-white flex items-center">
-                            <i class="fas fa-tasks text-indigo-500 dark:text-indigo-400 mr-2"></i>Funciones principales:
+                            <i class="fas fa-tasks text-indigo-500 dark:text-indigo-400 mr-2"></i>${translate('sections.mainFunctions')}
                         </h4>
                         <ul class="list-disc pl-5 text-gray-800 dark:text-gray-300 space-y-1">
                             ${exp.funciones.map(funcion => `
@@ -117,14 +214,17 @@ async function loadExperience() {
 
 async function loadEducation() {
     try {
-        const response = await fetch('../data/education.json');
+        const currentLang = localStorage.getItem('language') || 'es';
+        const jsonFile = currentLang === 'es' ? 'data/education.json' : 'data/i18n/education_en.json';
+        const response = await fetch(jsonFile);
         const data = await response.json();
         const container = document.getElementById('education-container');
+        container.innerHTML = ''; // Limpiar el contenedor antes de agregar nuevo contenido
 
         // Sección de Educación Formal
         const educationTitle = `
             <h2 class="text-3xl font-bold mb-6 text-gray-900 dark:text-white" data-aos="fade-up">
-                <i class="fas fa-graduation-cap text-indigo-600 dark:text-indigo-400 mr-2"></i>Educación Formal
+                <i class="fas fa-graduation-cap text-indigo-600 dark:text-indigo-400 mr-2"></i>${translate('sections.formalEducation')}
             </h2>
         `;
         container.insertAdjacentHTML('beforeend', educationTitle);
@@ -144,13 +244,13 @@ async function loadEducation() {
                     <p class="text-gray-700 dark:text-gray-300 mb-4">${edu.field}</p>
                     <div class="mt-4">
                         <h4 class="font-semibold mb-2 text-gray-900 dark:text-white flex items-center">
-                            <i class="fas fa-book text-indigo-500 dark:text-indigo-400 mr-2"></i>Trabajo Final:
+                            <i class="fas fa-book text-indigo-500 dark:text-indigo-400 mr-2"></i>${translate('sections.finalProject')}
                         </h4>
                         <div class="pl-5">
                             <p class="text-gray-800 dark:text-gray-300">${edu.thesis.title}</p>
                             <a href="${edu.thesis.projectLink || edu.thesis.link}" 
                                class="text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-300 flex items-center mt-2">
-                                <i class="fas fa-external-link-alt mr-2"></i>${edu.thesis.projectLink ? 'Ver proyecto' : 'Ver en GitHub'}
+                                <i class="fas fa-external-link-alt mr-2"></i>${translate(edu.thesis.projectLink ? 'sections.viewProject' : 'sections.viewGithub')}
                             </a>
                         </div>
                     </div>
@@ -162,7 +262,7 @@ async function loadEducation() {
         // Sección de Certificaciones
         const certTitle = `
             <h2 class="text-3xl font-bold mb-6 mt-12 text-gray-900 dark:text-white" data-aos="fade-up">
-                <i class="fas fa-medal text-indigo-600 dark:text-indigo-400 mr-2"></i>Certificaciones y Cursos
+                <i class="fas fa-medal text-indigo-600 dark:text-indigo-400 mr-2"></i>${translate('sections.certifications')}
             </h2>
         `;
         container.insertAdjacentHTML('beforeend', certTitle);
@@ -192,11 +292,13 @@ async function loadEducation() {
 
 async function loadProjects() {
     try {
-        const response = await fetch('data/projects.json');
+        const currentLang = localStorage.getItem('language') || 'es';
+        const jsonFile = currentLang === 'es' ? 'data/projects.json' : 'data/i18n/projects_en.json';
+        const response = await fetch(jsonFile);
         const data = await response.json();
         const container = document.getElementById('projects-container');
+        container.innerHTML = ''; // Limpiar el contenedor antes de agregar nuevo contenido
 
-        // Usando grid con auto-rows para permitir alturas diferentes
         container.className = 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 auto-rows-auto';
 
         data.projects.forEach((project, index) => {
@@ -210,7 +312,7 @@ async function loadProjects() {
                             <div>
                                 <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-1">${project.name}</h3>
                                 <p class="text-gray-600 dark:text-gray-400 text-sm">
-                                    <i class="fas fa-calendar mr-2"></i>${project.startYear}${project.endYear ? ` - ${project.endYear}` : ' - Presente'}
+                                    <i class="fas fa-calendar mr-2"></i>${project.startYear}${project.endYear ? ` - ${project.endYear}` : ' - ' + (currentLang === 'es' ? 'Presente' : 'Present')}
                                 </p>
                             </div>
                         </div>
@@ -226,13 +328,13 @@ async function loadProjects() {
                             ${project.websiteUrl ? `
                                 <a href="${project.websiteUrl}" target="_blank" 
                                    class="inline-flex items-center text-indigo-700 dark:text-indigo-400 hover:text-indigo-900 dark:hover:text-indigo-300 font-medium">
-                                    <i class="fas fa-globe mr-2"></i> Página web / demo
+                                    <i class="fas fa-globe mr-2"></i> ${translate('sections.websiteDemo')}
                                 </a>
                             ` : ''}
                             ${project.githubUrl ? `
                                 <a href="${project.githubUrl}" target="_blank" 
                                    class="inline-flex items-center text-indigo-700 dark:text-indigo-400 hover:text-indigo-900 dark:hover:text-indigo-300 font-medium">
-                                    <i class="fab fa-github mr-2"></i> Ver código en GitHub
+                                    <i class="fab fa-github mr-2"></i> ${translate('sections.viewGithub')}
                                 </a>
                             ` : ''}
                         </div>
@@ -241,14 +343,16 @@ async function loadProjects() {
                             <div class="space-y-6">
                                 ${project.demos.web ? `
                                     <div>
-                                        <h4 class="text-lg font-semibold mb-4 text-gray-900 dark:text-white">Demostración Web</h4>
+                                        <h4 class="text-lg font-semibold mb-4 text-gray-900 dark:text-white">${translate('sections.webDemo')}</h4>
                                         <div class="grid grid-cols-1 gap-4">
                                             ${project.demos.web.map(demo => `
                                                 <div class="border dark:border-gray-700 rounded-lg p-4">
                                                     <h5 class="font-medium mb-2 text-gray-900 dark:text-white">${demo.title}</h5>
                                                     <video controls class="w-full rounded-lg">
                                                         <source src="${demo.videoUrl}" type="video/mp4">
-                                                        Tu navegador no soporta el elemento video.
+                                                        ${currentLang === 'es' ? 
+                                                            'Tu navegador no soporta el elemento video.' : 
+                                                            'Your browser does not support the video element.'}
                                                     </video>
                                                 </div>
                                             `).join('')}
@@ -258,14 +362,16 @@ async function loadProjects() {
                                 
                                 ${project.demos.mobile ? `
                                     <div>
-                                        <h4 class="text-lg font-semibold mb-4 text-gray-900 dark:text-white">Demostración Móvil</h4>
+                                        <h4 class="text-lg font-semibold mb-4 text-gray-900 dark:text-white">${translate('sections.mobileDemo')}</h4>
                                         <div class="grid grid-cols-1 gap-4">
                                             ${project.demos.mobile.map(demo => `
                                                 <div class="border dark:border-gray-700 rounded-lg p-4">
                                                     <h5 class="font-medium mb-2 text-gray-900 dark:text-white">${demo.title}</h5>
                                                     <video controls class="w-full max-w-sm mx-auto rounded-lg">
                                                         <source src="${demo.videoUrl}" type="video/mp4">
-                                                        Tu navegador no soporta el elemento video.
+                                                        ${currentLang === 'es' ? 
+                                                            'Tu navegador no soporta el elemento video.' : 
+                                                            'Your browser does not support the video element.'}
                                                     </video>
                                                 </div>
                                             `).join('')}
@@ -284,30 +390,22 @@ async function loadProjects() {
     }
 }
 
-function getGreetingByTime() {
-    const hour = new Date().getHours();
-    if (hour >= 6 && hour < 12) {
-        return '¡Buenos días!';
-    } else if (hour >= 12 && hour < 20) {
-        return '¡Buenas tardes!';
-    } else {
-        return '¡Buenas noches!';
-    }
-}
-
 async function loadProfile() {
     try {
-        const response = await fetch('data/profile.json');
+        const currentLang = localStorage.getItem('language') || 'es';
+        const jsonFile = currentLang === 'es' ? 'data/profile.json' : 'data/i18n/profile_en.json';
+        const response = await fetch(jsonFile);
         const data = await response.json();
         
-        // Update title
+        // Actualizar título
         document.title = `${data.fullName} - ${data.title}`;
         
-        // Update hero section content
+        // Actualizar contenido de la sección hero
         const heroContent = document.querySelector('.hero-section .text-white');
+        const greeting = translate('greetings.' + getTimeOfDay());
         heroContent.innerHTML = `
-            <h1 class="text-4xl md:text-5xl font-bold mb-6">${getGreetingByTime()}</h1>
-            <p class="text-xl mb-8 opacity-90">${data.description}</p>
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">${greeting}</h1>
+            <p class="text-xl mb-8 opacity-90">${translate('profile.intro')}</p>
             <div class="flex space-x-6 mb-8">
                 <a href="${data.social.github}" target="_blank" rel="noopener noreferrer" 
                    class="flex items-center justify-center w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 dark:bg-gray-800/10 dark:hover:bg-gray-800/20 transition-all duration-300 transform hover:scale-110">
@@ -324,7 +422,7 @@ async function loadProfile() {
             </div>
         `;
 
-        // Update section cards
+        // Actualizar tarjetas de sección
         const sectionLinks = document.querySelector('.grid.grid-cols-1.md\\:grid-cols-3');
         sectionLinks.innerHTML = data.sections.map(section => `
             <a href="${section.link}" class="bg-white/10 backdrop-blur-md rounded-lg p-8 text-center text-white hover:bg-white/20 dark:bg-gray-800/10 dark:hover:bg-gray-800/20 transition duration-300">
@@ -335,6 +433,17 @@ async function loadProfile() {
         `).join('');
     } catch (error) {
         console.error('Error cargando el perfil:', error);
+    }
+}
+
+function getTimeOfDay() {
+    const hour = new Date().getHours();
+    if (hour >= 6 && hour < 12) {
+        return 'morning';
+    } else if (hour >= 12 && hour < 20) {
+        return 'afternoon';
+    } else {
+        return 'evening';
     }
 }
 

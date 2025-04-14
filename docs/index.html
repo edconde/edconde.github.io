@@ -25,21 +25,24 @@
                 <div class="flex space-x-7">
                     <div class="py-4">
                         <a href="index.html">
-                            <h1 class="text-2xl font-bold bg-gradient-to-r from-indigo-500 to-purple-600 bg-clip-text text-transparent">Inicio</h1>
+                            <h1 class="text-2xl font-bold bg-gradient-to-r from-indigo-500 to-purple-600 bg-clip-text text-transparent" data-i18n="navigation.home">Inicio</h1>
                         </a>
                     </div>
                 </div>
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center space-x-4">
-                    <a href="experience.html" class="nav-link py-4 px-2 text-gray-500 dark:text-gray-300 font-medium">Experiencia</a>
-                    <a href="education.html" class="nav-link py-4 px-2 text-gray-500 dark:text-gray-300 font-medium">Formación</a>
-                    <a href="portfolio.html" class="nav-link py-4 px-2 text-gray-500 dark:text-gray-300 font-medium">Portfolio</a>
+                    <a href="experience.html" class="nav-link py-4 px-2 text-gray-500 dark:text-gray-300 font-medium" data-i18n="navigation.experience">Experiencia</a>
+                    <a href="education.html" class="nav-link py-4 px-2 text-gray-500 dark:text-gray-300 font-medium" data-i18n="navigation.education">Formación</a>
+                    <a href="portfolio.html" class="nav-link py-4 px-2 text-gray-500 dark:text-gray-300 font-medium" data-i18n="navigation.portfolio">Portfolio</a>
                     <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
                         <i class="fas fa-moon text-gray-500 dark:text-gray-400" id="theme-toggle-icon"></i>
                     </button>
+                    <button id="language-toggle" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors text-gray-500 dark:text-gray-400">
+                        EN
+                    </button>
                 </div>
                 <!-- Mobile Menu Button -->
-                <div class="md:hidden flex items-center">
+                <div class="md:hidden flex items-center space-x-2">
                     <button id="mobile-menu-button" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
                         <i class="fas fa-bars text-gray-500 dark:text-gray-400 text-xl"></i>
                     </button>
@@ -47,11 +50,14 @@
             </div>
             <!-- Mobile Menu -->
             <div id="mobile-menu" class="hidden md:hidden pb-4">
-                <a href="experience.html" class="block py-2 px-4 text-gray-500 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg">Experiencia</a>
-                <a href="education.html" class="block py-2 px-4 text-gray-500 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg">Formación</a>
-                <a href="portfolio.html" class="block py-2 px-4 text-gray-500 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg">Portfolio</a>
+                <a href="experience.html" class="block py-2 px-4 text-gray-500 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg" data-i18n="navigation.experience">Experiencia</a>
+                <a href="education.html" class="block py-2 px-4 text-gray-500 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg" data-i18n="navigation.education">Formación</a>
+                <a href="portfolio.html" class="block py-2 px-4 text-gray-500 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg" data-i18n="navigation.portfolio">Portfolio</a>
                 <button id="theme-toggle-mobile" class="w-full text-left py-2 px-4 text-gray-500 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg">
-                    <i class="fas fa-moon mr-2"></i> Cambiar tema
+                    <i class="fas fa-moon mr-2"></i> <span data-i18n="navigation.changeTheme">Cambiar tema</span>
+                </button>
+                <button id="language-toggle-mobile" class="w-full text-left py-2 px-4 text-gray-500 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg">
+                    <i class="fas fa-language mr-2"></i> <span>Change to English</span>
                 </button>
             </div>
         </div>
