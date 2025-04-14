@@ -1,4 +1,4 @@
 # edconde.github.io
 Sitio web personal.
 
-[http](https://edconde.github.io/)
+[edconde.github.io](https://edconde.github.io/)
