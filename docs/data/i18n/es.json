@@ -9,7 +9,8 @@
   "greetings": {
     "morning": "¡Buenos días!",
     "afternoon": "¡Buenas tardes!",
-    "evening": "¡Buenas noches!"
+    "evening": "¡Buenas noches!",
+    "night": "Buenas noches!"
   },
   "headers": {
     "professionalPath": "Trayectoria profesional",

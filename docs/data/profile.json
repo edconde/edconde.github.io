@@ -1,8 +1,12 @@
 {
   "name": "Edgar",
+  "name_en": "Edgar",
   "fullName": "Edgar Conde",
+  "fullName_en": "Edgar Conde",
   "title": "Ingeniero de Software",
+  "title_en": "Software Engineer",
   "description": "Mi nombre es Edgar, soy Ingeniero de Software y ésta es mi web personal.",
+  "description_en": "My name is Edgar, I'm a Software Engineer and this is my personal website.",
   "social": {
     "github": "https://github.com/edconde",
     "linkedin": "https://linkedin.com/in/edgarconde"
@@ -10,20 +14,26 @@
   "sections": [
     {
       "title": "Trayectoria Profesional",
+      "title_en": "Professional Experience",
       "icon": "fas fa-briefcase",
       "description": "Explora mi experiencia y logros profesionales",
+      "description_en": "Explore my experience and professional achievements",
       "link": "experience.html"
     },
     {
       "title": "Formación",
+      "title_en": "Education",
       "icon": "fas fa-graduation-cap",
       "description": "Descubre mi formación académica y certificaciones",
+      "description_en": "Discover my academic background and certifications",
       "link": "education.html"
     },
     {
       "title": "Proyectos",
+      "title_en": "Projects",
       "icon": "fas fa-code",
       "description": "Conoce los proyectos que he desarrollado",
+      "description_en": "Learn about the projects I've developed",
       "link": "portfolio.html"
     }
   ]

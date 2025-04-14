@@ -2,8 +2,10 @@
   "projects": [
     {
       "name": "Basketball Player Recommender",
+      "name_en": "Basketball Player Recommender",
       "icon": "fas fa-basketball",
       "description": "Sistema de recomendación de pares de jugadores NBA complementarios para la temporada 2020-2021, utilizando datos de partidos de 2015 a 2020.",
+      "description_en": "NBA player pair recommendation system for the 2020-2021 season, using game data from 2015 to 2020.",
       "technologies": ["Python", "Pandas", "Scikit-learn", "MongoDB", "NodeJS", "Angular"],
       "githubUrl": "https://github.com/edconde/basketball-player-recommender",
       "websiteUrl": "https://edconde.github.io/basketball-player-recommender",
@@ -12,8 +14,10 @@
     },
     {
       "name": "ASPA: Aplicación para el Seguimiento de Pruebas de Atletismo",
+      "name_en": "ASPA: Athletic Event Tracking Application",
       "icon": "fas fa-person-running",
       "description": "Proyecto que consiste principalmente en una aplicación web optimizada para tabletas, destinada a ser utilizada por jueces de atletismo para cubrir las hojas de campo de las pruebas, gestionar competiciones, inscripciones, etc. Además, como parte del proyecto, también hay una pequeña aplicación móvil que permite a los usuarios atletas inscribirse en competiciones y consultar sus resultados.",
+      "description_en": "Project consisting mainly of a web application optimized for tablets, designed to be used by athletics judges to fill out field event sheets, manage competitions, registrations, etc. Additionally, as part of the project, there is also a small mobile application that allows athlete users to register for competitions and check their results.",
       "technologies": ["MySQL", "Spring Boot", "Angular", "Ionic"],
       "githubUrl": "https://github.com/edconde/aspa",
       "websiteUrl": "https://edconde.github.io/aspa",
@@ -23,36 +27,44 @@
         "web": [
           {
             "title": "Inicio de sesión + creación de competición",
+            "title_en": "Login + competition creation",
             "videoUrl": "assets/video/aspa/web/1-inicio_sesion_crear_competicion.mp4"
           },
           {
             "title": "Crear pruebas asociadas a una competición",
+            "title_en": "Create events for a competition",
             "videoUrl": "assets/video/aspa/web/2-crear_pruebas_competicion.mp4"
           },
           {
             "title": "Inscribir atletas + cámara de llamadas",
+            "title_en": "Register athletes + call room",
             "videoUrl": "assets/video/aspa/web/3-inscribir_atletas_camara_llamadas.mp4"
           },
           {
             "title": "Hoja de campo para una prueba que no es de tipo salto vertical",
+            "title_en": "Field sheet for a non-vertical jump event",
             "videoUrl": "assets/video/aspa/web/4-hoja_campo_prueba_no_vertical.mp4"
           },
           {
             "title": "Hoja de campo para una prueba de tipo salto vertical",
+            "title_en": "Field sheet for a vertical jump event",
             "videoUrl": "assets/video/aspa/web/5-hoja_campo_prueba_vertical.mp4"
           },
           {
             "title": "Control de reglamento y descalificaciones",
+            "title_en": "Rules control and disqualifications",
             "videoUrl": "assets/video/aspa/web/6-control_descalificaciones.mp4"
           },
           {
             "title": "Panel de ayuda",
+            "title_en": "Help panel",
             "videoUrl": "assets/video/aspa/web/7-panel_ayuda_usuario.mp4"
           }
         ],
         "mobile": [
           {
             "title": "Inicio de sesión, inscripción en pruebas y consulta de resultados",
+            "title_en": "Login, event registration and results check",
             "videoUrl": "assets/video/aspa/mobile/demo-mobile.mp4"
           }
         ]

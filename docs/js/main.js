@@ -2,6 +2,7 @@ let currentTranslations = {};
 
 async function loadTranslations(lang) {
     try {
+        // Ahora solo necesitamos cargar el archivo del idioma correspondiente que contiene las traducciones de la interfaz
         const response = await fetch(`data/i18n/${lang}.json`);
         currentTranslations = await response.json();
         return currentTranslations;
@@ -165,8 +166,8 @@ function updateActiveNavLink(pathname) {
 async function loadExperience() {
     try {
         const currentLang = localStorage.getItem('language') || 'es';
-        const jsonFile = currentLang === 'es' ? 'data/experience.json' : 'data/i18n/experience_en.json';
-        const response = await fetch(jsonFile);
+        const suffix = currentLang === 'en' ? '_en' : '';
+        const response = await fetch('data/experience.json');
         const data = await response.json();
         const container = document.getElementById('experience-container');
         container.innerHTML = ''; // Limpiar el contenedor antes de agregar nuevo contenido
@@ -176,21 +177,21 @@ async function loadExperience() {
                 <div class="card p-6 rounded-lg shadow-md dark:bg-gray-800" data-aos="fade-up" data-aos-delay="${index * 100}">
                     <div class="flex justify-between items-start mb-4">
                         <div>
-                            <h3 class="text-xl font-bold text-gray-900 dark:text-white">${exp.position}</h3>
-                            <p class="text-indigo-700 dark:text-indigo-400 font-medium">${exp.company}</p>
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white">${exp['position' + suffix]}</h3>
+                            <p class="text-indigo-700 dark:text-indigo-400 font-medium">${exp['company' + suffix]}</p>
                         </div>
                         <div class="text-right">
-                            <p class="text-gray-800 dark:text-gray-200 font-medium">${exp.period}</p>
-                            <p class="text-gray-700 dark:text-gray-300"><i class="fas fa-map-marker-alt mr-1"></i>${exp.location}</p>
+                            <p class="text-gray-800 dark:text-gray-200 font-medium">${exp['period' + suffix]}</p>
+                            <p class="text-gray-700 dark:text-gray-300"><i class="fas fa-map-marker-alt mr-1"></i>${exp['location' + suffix]}</p>
                         </div>
                     </div>
-                    <p class="text-gray-800 dark:text-gray-300 mb-4 leading-relaxed">${exp.description}</p>
+                    <p class="text-gray-800 dark:text-gray-300 mb-4 leading-relaxed">${exp['description' + suffix]}</p>
                     <div class="mb-4">
                         <h4 class="font-semibold mb-2 text-gray-900 dark:text-white flex items-center">
                             <i class="fas fa-tasks text-indigo-500 dark:text-indigo-400 mr-2"></i>${translate('sections.mainFunctions')}
                         </h4>
                         <ul class="list-disc pl-5 text-gray-800 dark:text-gray-300 space-y-1">
-                            ${exp.funciones.map(funcion => `
+                            ${exp['funciones' + suffix].map(funcion => `
                                 <li class="flex items-start">
                                     <i class="fas fa-check-circle text-green-500 dark:text-green-400 mt-1 mr-2"></i>
                                     <span>${funcion}</span>
@@ -215,8 +216,8 @@ async function loadExperience() {
 async function loadEducation() {
     try {
         const currentLang = localStorage.getItem('language') || 'es';
-        const jsonFile = currentLang === 'es' ? 'data/education.json' : 'data/i18n/education_en.json';
-        const response = await fetch(jsonFile);
+        const suffix = currentLang === 'en' ? '_en' : '';
+        const response = await fetch('data/education.json');
         const data = await response.json();
         const container = document.getElementById('education-container');
         container.innerHTML = ''; // Limpiar el contenedor antes de agregar nuevo contenido
@@ -234,20 +235,20 @@ async function loadEducation() {
                 <div class="card p-6 rounded-lg shadow-md dark:bg-gray-800" data-aos="fade-up" data-aos-delay="${index * 100}">
                     <div class="flex justify-between items-start mb-4">
                         <div>
-                            <h3 class="text-xl font-bold text-gray-900 dark:text-white">${edu.degree}</h3>
-                            <p class="text-indigo-700 dark:text-indigo-400 font-medium">${edu.institution}</p>
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white">${edu['degree' + suffix]}</h3>
+                            <p class="text-indigo-700 dark:text-indigo-400 font-medium">${edu['institution' + suffix]}</p>
                         </div>
                         <div class="text-right">
-                            <p class="text-gray-800 dark:text-gray-200 font-medium">${edu.period}</p>
+                            <p class="text-gray-800 dark:text-gray-200 font-medium">${edu['period' + suffix]}</p>
                         </div>
                     </div>
-                    <p class="text-gray-700 dark:text-gray-300 mb-4">${edu.field}</p>
+                    <p class="text-gray-700 dark:text-gray-300 mb-4">${edu['field' + suffix]}</p>
                     <div class="mt-4">
                         <h4 class="font-semibold mb-2 text-gray-900 dark:text-white flex items-center">
                             <i class="fas fa-book text-indigo-500 dark:text-indigo-400 mr-2"></i>${translate('sections.finalProject')}
                         </h4>
                         <div class="pl-5">
-                            <p class="text-gray-800 dark:text-gray-300">${edu.thesis.title}</p>
+                            <p class="text-gray-800 dark:text-gray-300">${edu.thesis['title' + suffix]}</p>
                             <a href="${edu.thesis.projectLink || edu.thesis.link}" 
                                class="text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-300 flex items-center mt-2">
                                 <i class="fas fa-external-link-alt mr-2"></i>${translate(edu.thesis.projectLink ? 'sections.viewProject' : 'sections.viewGithub')}
@@ -271,10 +272,10 @@ async function loadEducation() {
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6" data-aos="fade-up">
                 ${data.certifications.map((cert, index) => `
                     <div class="card p-6 rounded-lg shadow-md dark:bg-gray-800" data-aos="fade-up" data-aos-delay="${index * 100}">
-                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">${cert.title}</h3>
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">${cert['title' + suffix]}</h3>
                         <div class="flex items-center justify-between">
                             <p class="text-indigo-700 dark:text-indigo-400 font-medium">
-                                <i class="fas fa-building mr-2"></i>${cert.institution}
+                                <i class="fas fa-building mr-2"></i>${cert['institution' + suffix]}
                             </p>
                             <p class="text-gray-700 dark:text-gray-300">
                                 <i class="fas fa-calendar-alt mr-2"></i>${cert.year}
@@ -293,8 +294,8 @@ async function loadEducation() {
 async function loadProjects() {
     try {
         const currentLang = localStorage.getItem('language') || 'es';
-        const jsonFile = currentLang === 'es' ? 'data/projects.json' : 'data/i18n/projects_en.json';
-        const response = await fetch(jsonFile);
+        const suffix = currentLang === 'en' ? '_en' : '';
+        const response = await fetch('data/projects.json');
         const data = await response.json();
         const container = document.getElementById('projects-container');
         container.innerHTML = ''; // Limpiar el contenedor antes de agregar nuevo contenido
@@ -310,13 +311,13 @@ async function loadProjects() {
                                 <i class="${project.icon} text-3xl text-indigo-600 dark:text-indigo-400"></i>
                             ` : ''}
                             <div>
-                                <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-1">${project.name}</h3>
+                                <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-1">${project['name' + suffix]}</h3>
                                 <p class="text-gray-600 dark:text-gray-400 text-sm">
                                     <i class="fas fa-calendar mr-2"></i>${project.startYear}${project.endYear ? ` - ${project.endYear}` : ' - ' + (currentLang === 'es' ? 'Presente' : 'Present')}
                                 </p>
                             </div>
                         </div>
-                        <p class="text-gray-800 dark:text-gray-300 mb-4 leading-relaxed">${project.description}</p>
+                        <p class="text-gray-800 dark:text-gray-300 mb-4 leading-relaxed">${project['description' + suffix]}</p>
                         
                         <div class="flex flex-wrap gap-2 mb-6">
                             ${project.technologies.map(tech => 
@@ -347,7 +348,7 @@ async function loadProjects() {
                                         <div class="grid grid-cols-1 gap-4">
                                             ${project.demos.web.map(demo => `
                                                 <div class="border dark:border-gray-700 rounded-lg p-4">
-                                                    <h5 class="font-medium mb-2 text-gray-900 dark:text-white">${demo.title}</h5>
+                                                    <h5 class="font-medium mb-2 text-gray-900 dark:text-white">${demo['title' + suffix]}</h5>
                                                     <video controls class="w-full rounded-lg">
                                                         <source src="${demo.videoUrl}" type="video/mp4">
                                                         ${currentLang === 'es' ? 
@@ -366,7 +367,7 @@ async function loadProjects() {
                                         <div class="grid grid-cols-1 gap-4">
                                             ${project.demos.mobile.map(demo => `
                                                 <div class="border dark:border-gray-700 rounded-lg p-4">
-                                                    <h5 class="font-medium mb-2 text-gray-900 dark:text-white">${demo.title}</h5>
+                                                    <h5 class="font-medium mb-2 text-gray-900 dark:text-white">${demo['title' + suffix]}</h5>
                                                     <video controls class="w-full max-w-sm mx-auto rounded-lg">
                                                         <source src="${demo.videoUrl}" type="video/mp4">
                                                         ${currentLang === 'es' ? 
@@ -393,12 +394,12 @@ async function loadProjects() {
 async function loadProfile() {
     try {
         const currentLang = localStorage.getItem('language') || 'es';
-        const jsonFile = currentLang === 'es' ? 'data/profile.json' : 'data/i18n/profile_en.json';
-        const response = await fetch(jsonFile);
+        const response = await fetch('data/profile.json');
         const data = await response.json();
         
         // Actualizar título
-        document.title = `${data.fullName} - ${data.title}`;
+        const suffix = currentLang === 'en' ? '_en' : '';
+        document.title = `${data.fullName} - ${data['title' + suffix]}`;
         
         // Actualizar contenido de la sección hero
         const heroContent = document.querySelector('.hero-section .text-white');
@@ -427,8 +428,8 @@ async function loadProfile() {
         sectionLinks.innerHTML = data.sections.map(section => `
             <a href="${section.link}" class="bg-white/10 backdrop-blur-md rounded-lg p-8 text-center text-white hover:bg-white/20 dark:bg-gray-800/10 dark:hover:bg-gray-800/20 transition duration-300">
                 <i class="${section.icon} text-4xl mb-4"></i>
-                <h2 class="text-xl font-bold mb-2">${section.title}</h2>
-                <p class="opacity-75">${section.description}</p>
+                <h2 class="text-xl font-bold mb-2">${section['title' + suffix]}</h2>
+                <p class="opacity-75">${section['description' + suffix]}</p>
             </a>
         `).join('');
     } catch (error) {
@@ -438,12 +439,17 @@ async function loadProfile() {
 
 function getTimeOfDay() {
     const hour = new Date().getHours();
+    const currentLang = localStorage.getItem('language') || 'es';
+    
     if (hour >= 6 && hour < 12) {
         return 'morning';
     } else if (hour >= 12 && hour < 20) {
         return 'afternoon';
-    } else {
+    } else if (hour >= 20 && hour < 22) {
         return 'evening';
+    } else {
+        // Entre las 22h y las 6h
+        return 'night';
     }
 }
 

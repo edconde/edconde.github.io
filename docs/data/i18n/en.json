@@ -9,7 +9,8 @@
   "greetings": {
     "morning": "Good morning!",
     "afternoon": "Good afternoon!",
-    "evening": "Good evening!"
+    "evening": "Good evening!",
+    "night": "Hello there!"
   },
   "headers": {
     "professionalPath": "Professional Path",

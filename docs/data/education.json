@@ -2,22 +2,32 @@
   "education": [
     {
       "degree": "MÁSTER EN ANÁLISIS Y VISUALIZACIÓN DE BIG DATA",
+      "degree_en": "MASTER'S DEGREE IN BIG DATA ANALYSIS AND VISUALIZATION",
       "institution": "UNIVERSIDAD INTERNACIONAL DE LA RIOJA",
+      "institution_en": "INTERNATIONAL UNIVERSITY OF LA RIOJA",
       "period": "2020 - 2022",
+      "period_en": "2020 - 2022",
       "field": "Ciencia de Datos y Tecnologías de la Información",
+      "field_en": "Data Science and Information Technology",
       "thesis": {
         "title": "Sistema recomendador de jugadores de baloncesto complementarios",
+        "title_en": "Complementary basketball players recommender system",
         "link": "https://github.com/edconde/basketball-player-recommender#readme",
         "projectLink": null
       }
     },
     {
       "degree": "GRADO EN INGENIERÍA INFORMÁTICA",
+      "degree_en": "BACHELOR'S DEGREE IN COMPUTER ENGINEERING",
       "institution": "UNIVERSIDAD DE VIGO",
+      "institution_en": "UNIVERSITY OF VIGO",
       "period": "2013 - 2018",
+      "period_en": "2013 - 2018",
       "field": "Ciencias de la Computación y la Información - Mención en Ingeniería de Software",
+      "field_en": "Computer Science and Information - Software Engineering Major",
       "thesis": {
         "title": "Aplicación para el Seguimiento de Pruebas de Atletismo",
+        "title_en": "Athletic Event Tracking Application",
         "link": "https://github.com/edconde/aspa#readme",
         "projectLink": "portfolio.html#aspa"
       }
@@ -26,27 +36,37 @@
   "certifications": [
     {
       "title": "Curso de Programación en Python",
+      "title_en": "Python Programming Course",
       "institution": "Universidad Internacional de La Rioja",
+      "institution_en": "International University of La Rioja",
       "year": "2021"
     },
     {
       "title": "Python 3.X",
+      "title_en": "Python 3.X",
       "institution": "Udemy",
+      "institution_en": "Udemy",
       "year": "2020"
     },
     {
       "title": "Desarrollo de Soluciones con Machine Learning",
+      "title_en": "Machine Learning Solutions Development",
       "institution": "Vitae Consultores",
+      "institution_en": "Vitae Consultores",
       "year": "2019"
     },
     {
       "title": "Learn Angular from scratch",
+      "title_en": "Learn Angular from scratch",
       "institution": "Udemy",
+      "institution_en": "Udemy",
       "year": "2018"
     },
     {
       "title": "Introducción al Paralelismo",
+      "title_en": "Introduction to Parallelism",
       "institution": "Centro de Supercomputación de Galicia (CESGA)",
+      "institution_en": "Galician Supercomputing Center (CESGA)",
       "year": "2017"
     }
   ]
