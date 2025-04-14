@@ -72,6 +72,12 @@ body {
   box-shadow: var(--card-hover-shadow);
 }
 
+/* Asegurar que las tarjetas de proyecto tengan altura automática */
+#projects-container > .card {
+  height: fit-content !important;
+  align-self: start;
+}
+
 .tech-tag {
   background: var(--primary-gradient);
   color: white;

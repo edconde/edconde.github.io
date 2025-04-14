@@ -1,11 +1,22 @@
 {
   "projects": [
     {
+      "name": "Basketball Player Recommender",
+      "icon": "fas fa-basketball",
+      "description": "Sistema de recomendación de pares de jugadores NBA complementarios para la temporada 2020-2021, utilizando datos de partidos de 2015 a 2020.",
+      "technologies": ["Python", "Pandas", "Scikit-learn", "MongoDB", "NodeJS", "Angular"],
+      "githubUrl": "https://github.com/edconde/basketball-player-recommender",
+      "websiteUrl": "https://edconde.github.io/basketball-player-recommender",
+      "startYear": 2021,
+      "endYear": 2022
+    },
+    {
       "name": "ASPA: Aplicación para el Seguimiento de Pruebas de Atletismo",
       "icon": "fas fa-person-running",
       "description": "Proyecto que consiste principalmente en una aplicación web optimizada para tabletas, destinada a ser utilizada por jueces de atletismo para cubrir las hojas de campo de las pruebas, gestionar competiciones, inscripciones, etc. Además, como parte del proyecto, también hay una pequeña aplicación móvil que permite a los usuarios atletas inscribirse en competiciones y consultar sus resultados.",
       "technologies": ["MySQL", "Spring Boot", "Angular", "Ionic"],
       "githubUrl": "https://github.com/edconde/aspa",
+      "websiteUrl": "https://edconde.github.io/aspa",
       "startYear": 2017,
       "endYear": 2018,
       "demos": {

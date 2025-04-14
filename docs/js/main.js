@@ -196,10 +196,13 @@ async function loadProjects() {
         const data = await response.json();
         const container = document.getElementById('projects-container');
 
+        // Usando grid con auto-rows para permitir alturas diferentes
+        container.className = 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 auto-rows-auto';
+
         data.projects.forEach((project, index) => {
             const projectCard = `
-                <div class="card rounded-lg shadow-md overflow-hidden dark:bg-gray-800" data-aos="fade-up" data-aos-delay="${index * 100}">
-                    <div class="p-6">
+                <div class="card rounded-lg shadow-md overflow-hidden dark:bg-gray-800 h-auto" data-aos="fade-up" data-aos-delay="${index * 100}">
+                    <div class="p-6 h-full flex flex-col">
                         <div class="flex items-start gap-4 mb-2">
                             ${project.icon ? `
                                 <i class="${project.icon} text-3xl text-indigo-600 dark:text-indigo-400"></i>
@@ -219,12 +222,20 @@ async function loadProjects() {
                             ).join('')}
                         </div>
 
-                        ${project.githubUrl ? `
-                            <a href="${project.githubUrl}" target="_blank" 
-                               class="inline-flex items-center text-indigo-700 dark:text-indigo-400 hover:text-indigo-900 dark:hover:text-indigo-300 font-medium mb-6">
-                                <i class="fab fa-github mr-2"></i> Ver código en GitHub
-                            </a>
-                        ` : ''}
+                        <div class="flex flex-col gap-3 mb-6">
+                            ${project.websiteUrl ? `
+                                <a href="${project.websiteUrl}" target="_blank" 
+                                   class="inline-flex items-center text-indigo-700 dark:text-indigo-400 hover:text-indigo-900 dark:hover:text-indigo-300 font-medium">
+                                    <i class="fas fa-globe mr-2"></i> Página web / demo
+                                </a>
+                            ` : ''}
+                            ${project.githubUrl ? `
+                                <a href="${project.githubUrl}" target="_blank" 
+                                   class="inline-flex items-center text-indigo-700 dark:text-indigo-400 hover:text-indigo-900 dark:hover:text-indigo-300 font-medium">
+                                    <i class="fab fa-github mr-2"></i> Ver código en GitHub
+                                </a>
+                            ` : ''}
+                        </div>
 
                         ${project.demos ? `
                             <div class="space-y-6">
