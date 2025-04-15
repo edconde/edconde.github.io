@@ -1,6 +1,19 @@
 {
   "projects": [
     {
+      "name": "Web estática personal (la que estás viendo)",
+      "name_en": "Personal static website (the one you are viewing)",
+      "icon": "fas fa-globe",
+      "description": "Sitio web estático donde muestro mi currículum académico y profesional, e información resumida de proyectos que he realizado o de los que he formado parte, y en los que estoy trabajando.",
+      "description_en": "Static website where I display my academic and professional resume, and summarized information about projects I've completed or participated in, and those I'm currently working on.",
+      "technologies": ["HTML", "CSS", "Javascript", "Github Copilot", "NodeJS"],
+      "githubUrl": "https://github.com/edconde/edconde.github.io",
+      "websiteUrl": "https://edconde.github.io",
+      "startYear": 2025,
+      "endYear": null,
+      "showDemos": false
+    },
+    {
       "name": "Basketball Player Recommender",
       "name_en": "Basketball Player Recommender",
       "icon": "fas fa-basketball",
