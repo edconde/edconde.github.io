@@ -14,6 +14,19 @@
       "showDemos": false
     },
     {
+      "name": "Portal Web del CMD de Ourense",
+      "name_en": "Ourense Municipal Sports Council's website",
+      "icon": "fas fa-dumbbell",
+      "description": "Aplicación full-stack consistente en BD + back-end + front-end. El back-end gestiona el contenido (noticias, eventos, etc...) del CMD a través de un portal de administración, y front-end lo consume y lo muestra.",
+      "description_en": "A full-stack application consisting of a database, back-end and frontend. The back-end manages the content (news, events, etc.) of the CMD through an administration portal, and the front-end consumes and displays it.",
+      "technologies": ["Python", "Django", "Angular", "PostreSQL"],
+      "githubUrl": null,
+      "websiteUrl": "https://deportes.ourense.gal",
+      "startYear": 2023,
+      "endYear": 2024,
+      "showDemos": false
+    },
+    {
       "name": "Basketball Player Recommender",
       "name_en": "Basketball Player Recommender",
       "icon": "fas fa-basketball",
