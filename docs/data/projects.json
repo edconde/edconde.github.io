@@ -11,7 +11,8 @@
       "websiteUrl": "https://edconde.github.io",
       "startYear": 2025,
       "endYear": null,
-      "showDemos": false
+      "showDemos": false,
+      "image": null
     },
     {
       "name": "Portal Web del CMD de Ourense",
@@ -24,7 +25,8 @@
       "websiteUrl": "https://deportes.ourense.gal",
       "startYear": 2023,
       "endYear": 2024,
-      "showDemos": false
+      "showDemos": false,
+      "image": "assets/img/projects/Gemini_Generated_Image_cmd.jpg"
     },
     {
       "name": "Concello de Ourense",
@@ -37,7 +39,8 @@
       "websiteUrl": "https://moubil.ourense.gal",
       "startYear": 2022,
       "endYear": 2023,
-      "showDemos": false
+      "showDemos": false,
+      "image": "assets/img/projects/Gemini_Generated_Image_moubil.jpg"
     },
     {
       "name": "Basketball Player Recommender",
@@ -50,7 +53,8 @@
       "websiteUrl": "https://edconde.github.io/basketball-player-recommender",
       "startYear": 2021,
       "endYear": 2022,
-      "showDemos": false
+      "showDemos": false,
+      "image": "assets/img/projects/Gemini_Generated_Image_bpr.jpg"
     },
     {
       "name": "ASPA: Aplicación para el Seguimiento de Pruebas de Atletismo",
@@ -64,6 +68,7 @@
       "startYear": 2017,
       "endYear": 2018,
       "showDemos": false,
+      "image": "assets/img/projects/Gemini_Generated_Image_aspa.jpg",
       "demos": {
         "web": [
           {

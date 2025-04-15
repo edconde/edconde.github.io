@@ -303,8 +303,11 @@ async function loadProjects() {
         container.className = 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 auto-rows-auto';
 
         data.projects.forEach((project, index) => {
+            const targetUrl = project.websiteUrl || project.githubUrl || '#';
+            const projectImage = project.image || 'assets/img/projects/Gemini_Generated_Image_project_placeholder.jpg';
             const projectCard = `
-                <div class="card rounded-lg shadow-md overflow-hidden dark:bg-gray-800 h-auto" data-aos="fade-up" data-aos-delay="${index * 100}">
+                <div class="card rounded-lg shadow-md overflow-hidden dark:bg-gray-800 h-auto" data-aos="fade-up" data-aos-delay="${index * 100}" onclick="window.open('${targetUrl}', '_blank')">
+                    <img src="${projectImage}" alt="${project['name' + suffix]}" class="w-full h-48 object-cover">
                     <div class="p-6 h-full flex flex-col">
                         <div class="flex items-start gap-4 mb-2">
                             ${project.icon ? `
@@ -339,48 +342,6 @@ async function loadProjects() {
                                 </a>
                             ` : ''}
                         </div>
-
-                        ${project.showDemos && project.demos ? `
-                            <div class="space-y-6">
-                                ${project.demos.web ? `
-                                    <div>
-                                        <h4 class="text-lg font-semibold mb-4 text-gray-900 dark:text-white">${translate('sections.webDemo')}</h4>
-                                        <div class="grid grid-cols-1 gap-4">
-                                            ${project.demos.web.map(demo => `
-                                                <div class="border dark:border-gray-700 rounded-lg p-4">
-                                                    <h5 class="font-medium mb-2 text-gray-900 dark:text-white">${demo['title' + suffix]}</h5>
-                                                    <video controls class="w-full rounded-lg">
-                                                        <source src="${demo.videoUrl}" type="video/mp4">
-                                                        ${currentLang === 'es' ? 
-                                                            'Tu navegador no soporta el elemento video.' : 
-                                                            'Your browser does not support the video element.'}
-                                                    </video>
-                                                </div>
-                                            `).join('')}
-                                        </div>
-                                    </div>
-                                ` : ''}
-                                
-                                ${project.demos.mobile ? `
-                                    <div>
-                                        <h4 class="text-lg font-semibold mb-4 text-gray-900 dark:text-white">${translate('sections.mobileDemo')}</h4>
-                                        <div class="grid grid-cols-1 gap-4">
-                                            ${project.demos.mobile.map(demo => `
-                                                <div class="border dark:border-gray-700 rounded-lg p-4">
-                                                    <h5 class="font-medium mb-2 text-gray-900 dark:text-white">${demo['title' + suffix]}</h5>
-                                                    <video controls class="w-full max-w-sm mx-auto rounded-lg">
-                                                        <source src="${demo.videoUrl}" type="video/mp4">
-                                                        ${currentLang === 'es' ? 
-                                                            'Tu navegador no soporta el elemento video.' : 
-                                                            'Your browser does not support the video element.'}
-                                                    </video>
-                                                </div>
-                                            `).join('')}
-                                        </div>
-                                    </div>
-                                ` : ''}
-                            </div>
-                        ` : ''}
                     </div>
                 </div>
             `;

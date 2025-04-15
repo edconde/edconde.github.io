@@ -72,10 +72,47 @@ body {
   box-shadow: var(--card-hover-shadow);
 }
 
-/* Asegurar que las tarjetas de proyecto tengan altura automática */
+/* Adjust project cards to only occupy necessary space */
+#projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
 #projects-container > .card {
-  height: fit-content !important;
-  align-self: start;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#projects-container > .card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+#projects-container > .card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(79, 70, 229, 0.3), rgba(124, 58, 237, 0.3));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+#projects-container > .card:hover::before {
+  opacity: 1;
+}
+
+#projects-container > .card > * {
+  position: relative;
+  z-index: 2;
 }
 
 .tech-tag {
