@@ -29,7 +29,7 @@
     {
       "name": "Concello de Ourense",
       "name_en": "Concello de Ourense",
-      "icon": "fas fa-dumbbell",
+      "icon": "fas fa-mobile",
       "description": "Aplicación móvil oficial del Ayuntamiento de Ourense. Cuenta con notificaciones push y permite la consulta de información relativa a la ciudad (noticias, eventos, líneas de bus...). Disponible para Android e iOS.",
       "description_en": "Official mobile app of Ourense City Council. It features push notifications and allows you to view city-related information (news, events, bus routes, etc.). Available for Android and iOS.",
       "technologies": ["Flutter", "Dart", "Firebase"],
