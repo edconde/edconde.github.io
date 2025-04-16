@@ -305,6 +305,9 @@ async function loadProjects() {
         data.projects.forEach((project, index) => {
             const targetUrl = project.websiteUrl || project.githubUrl || '#';
             const projectImage = project.image || 'assets/img/projects/Gemini_Generated_Image_project_placeholder.jpg';
+            const yearDisplay = project.startYear === project.endYear ? 
+                `${project.startYear}` : 
+                `${project.startYear}${project.endYear ? ` - ${project.endYear}` : ' - ' + (currentLang === 'es' ? 'Presente' : 'Present')}`;
             const projectCard = `
                 <div class="card rounded-lg shadow-md overflow-hidden dark:bg-gray-800 h-auto" data-aos="fade-up" data-aos-delay="${index * 100}" onclick="window.open('${targetUrl}', '_blank')">
                     <img src="${projectImage}" alt="${project['name' + suffix]}" class="w-full h-48 object-cover">
@@ -316,7 +319,7 @@ async function loadProjects() {
                             <div>
                                 <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-1">${project['name' + suffix]}</h3>
                                 <p class="text-gray-600 dark:text-gray-400 text-sm">
-                                    <i class="fas fa-calendar mr-2"></i>${project.startYear}${project.endYear ? ` - ${project.endYear}` : ' - ' + (currentLang === 'es' ? 'Presente' : 'Present')}
+                                    <i class="fas fa-calendar mr-2"></i>${yearDisplay}
                                 </p>
                             </div>
                         </div>

@@ -18,8 +18,8 @@
       "name": "Portal Web del CMD de Ourense",
       "name_en": "Ourense Municipal Sports Council's website",
       "icon": "fas fa-dumbbell",
-      "description": "Aplicación full-stack consistente en base de datos, back-end y front-end. El back-end gestiona el contenido (noticias, eventos, etc...) del CMD a través de un portal de administración, y front-end lo consume y lo muestra.",
-      "description_en": "A full-stack application consisting of a database, back-end and front-end. The back-end manages the content (news, events, etc.) of the CMD through an administration portal, and the front-end consumes and displays it.",
+      "description": "Aplicación full-stack consistente en base de datos, back-end y front-end. El back-end gestiona el contenido (noticias, eventos, etc...) del Consejo Municipal de Deportes a través de un portal de administración, y el front-end lo consume y lo muestra.",
+      "description_en": "A full-stack application consisting of a database, back-end and front-end. The back-end manages the content (news, events, etc.) of the Ourense Municipal Sports Council through an administration portal, and the front-end consumes and displays it.",
       "technologies": ["Python", "Django", "Angular", "PostreSQL"],
       "githubUrl": null,
       "websiteUrl": "https://deportes.ourense.gal",
@@ -43,6 +43,20 @@
       "image": "assets/img/projects/Gemini_Generated_Image_moubil.jpg"
     },
     {
+      "name": "Portal de contratación de seguros",
+      "name_en": "Insurance hiring portal",
+      "icon": "fas fa-file-signature",
+      "description": "Portal web de contratación de seguros, donde los usuarios pueden consultar y contratar diferentes tipos de seguros. Las cuotas se calculan al momento en función de los datos introducidos por el usuario.",
+      "description_en": "Web portal for hiring insurance, where users can consult and hire different types of insurance. The premiums are calculated in real-time based on the data entered by the user.",
+      "technologies": ["Angular", "Typescript", "Postman"],
+      "githubUrl": null,
+      "websiteUrl": "https://www.abanca.com/es/seguros",
+      "startYear": 2022,
+      "endYear": 2022,
+      "showDemos": false,
+      "image": "assets/img/projects/Gemini_Generated_Image_seguros.jpg"
+    },
+    {
       "name": "Basketball Player Recommender",
       "name_en": "Basketball Player Recommender",
       "icon": "fas fa-basketball",
@@ -55,6 +69,34 @@
       "endYear": 2022,
       "showDemos": false,
       "image": "assets/img/projects/Gemini_Generated_Image_bpr.jpg"
+    },
+    {
+      "name": "API Framework para servicios bancarios",
+      "name_en": "API Framework for banking services",
+      "icon": "fas fa-building-columns",
+      "description": "Framework para el desarrollo de APIs que permite la creación de APIs para gestionar diferentes tipos de productos y servicios del banco. Este framework es utilizado por los diferentes equipos de desarrollo del banco para crear APIs consumidas por la Banca Móvil y Online, Broker, aplicaciones internas y aplicaciones de terceros.",
+      "description_en": "Framework for API development that allows the creation of APIs to manage different types of products and services of the bank. This framework is used by the different development teams of the bank to create APIs consumed by Mobile and Online Banking, Broker, internal applications, and third-party applications.",
+      "technologies": ["C#", ".NET Core", "ASP.NET", "Postman"],
+      "githubUrl": null,
+      "websiteUrl": "https://www.abanca.com/es/banca-a-distancia",
+      "startYear": 2019,
+      "endYear": 2021,
+      "showDemos": false,
+      "image": "assets/img/projects/Gemini_Generated_Image_bancaonline.jpg"
+    },
+    {
+      "name": "Portal web recomendador de plan de pensiones",
+      "name_en": "Web portal for pension plan recommendation",
+      "icon": "fas fa-piggy-bank",
+      "description": "Portal web para la recomendación de planes de pensiones, donde el usuario puede introducir sus datos y preferencias, y el sistema le recomienda un plan de pensiones que se ajusta a su perfil.",
+      "description_en": "Web portal for pension plan recommendation, where the user can enter their data and preferences, and the system recommends a pension plan that fits their profile.",
+      "technologies": ["Javascript", "CSS", "HTML", "Java", "Struts"],
+      "githubUrl": null,
+      "websiteUrl": "https://www.caixabank.es/particular/planes-de-pensiones/recomendador-planes.html",
+      "startYear": 2018,
+      "endYear": 2018,
+      "showDemos": false,
+      "image": "assets/img/projects/Gemini_Generated_Image_pensiones.jpg"
     },
     {
       "name": "ASPA: Aplicación para el Seguimiento de Pruebas de Atletismo",
