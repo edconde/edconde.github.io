@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/jpeg" href="assets/img/logo.jpg">
+    <title>CV - Edgar Conde</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @media print {
+            body { 
+                print-color-adjust: exact; 
+                -webkit-print-color-adjust: exact;
+            }
+            .no-print { display: none !important; }
+            .page-break { page-break-before: always; }
+            .print-grid-2 {
+                display: grid !important;
+                grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+            }
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+    <!-- Botón de idioma (solo pantalla) -->
+    <div class="no-print fixed top-4 right-4 flex gap-2">
+        <button id="lang-es" class="px-3 py-1 rounded bg-gray-800 text-white text-sm hover:bg-gray-900 transition">ES</button>
+        <button id="lang-en" class="px-3 py-1 rounded bg-gray-200 text-gray-700 text-sm hover:bg-gray-300 transition">EN</button>
+        <button onclick="window.print()" class="px-3 py-1 rounded bg-gray-200 text-gray-700 text-sm hover:bg-gray-300 transition">
+            🖨️
+        </button>
+    </div>
+
+    <div class="max-w-4xl mx-auto p-8">
+        <!-- Header -->
+        <header class="border-b-2 border-gray-800 pb-4 mb-6">
+            <h1 id="cv-name" class="text-3xl font-bold text-gray-900"></h1>
+            <p id="cv-title" class="text-xl text-gray-600 mt-1"></p>
+        </header>
+
+        <!-- Info Grid: Contact & Languages -->
+        <div class="grid grid-cols-2 gap-6 mb-8 print-grid-2">
+            <!-- Contact -->
+            <div>
+                <h2 id="contact-label" class="text-lg font-semibold text-gray-900 mb-2"></h2>
+                <div class="text-gray-600 space-y-1">
+                    <p>📧 <span id="cv-email"></span></p>
+                    <p>📱 <span id="cv-phone"></span></p>
+                    <p>🔗 <a id="cv-linkedin" href="#" class="text-gray-800 hover:underline" target="_blank"></a></p>
+                </div>
+            </div>
+            <!-- Languages -->
+            <div>
+                <h2 id="languages-label" class="text-lg font-semibold text-gray-900 mb-2"></h2>
+                <div id="languages-list" class="text-gray-600 space-y-1"></div>
+            </div>
+        </div>
+
+        <!-- Experience -->
+        <section class="mb-8">
+            <h2 id="experience-label" class="text-xl font-bold text-gray-900 border-b border-gray-300 pb-2 mb-4"></h2>
+            <div id="experience-list" class="space-y-5"></div>
+        </section>
+
+        <!-- Education -->
+        <section class="mb-8">
+            <h2 id="education-label" class="text-xl font-bold text-gray-900 border-b border-gray-300 pb-2 mb-4"></h2>
+            <div id="education-list" class="space-y-4"></div>
+        </section>
+
+        <!-- Courses -->
+        <section class="mb-8">
+            <h2 id="courses-label" class="text-xl font-bold text-gray-900 border-b border-gray-300 pb-2 mb-4"></h2>
+            <div id="courses-list" class="space-y-2"></div>
+        </section>
+
+        <!-- Technologies -->
+        <section>
+            <h2 id="technologies-label" class="text-xl font-bold text-gray-900 border-b border-gray-300 pb-2 mb-4"></h2>
+            <div id="technologies-list" class="space-y-2"></div>
+        </section>
+    </div>
+
+    <script>
+        let cvData = null;
+        let currentLang = 'es';
+
+        async function loadCV() {
+            const response = await fetch('data/cv.json');
+            cvData = await response.json();
+            renderCV();
+        }
+
+        function renderCV() {
+            const data = cvData[currentLang];
+            
+            // Header
+            document.getElementById('cv-name').textContent = data.name;
+            document.getElementById('cv-title').textContent = data.title;
+            
+            // Contact
+            document.getElementById('contact-label').textContent = data.contact.label;
+            document.getElementById('cv-email').textContent = data.contact.email;
+            document.getElementById('cv-phone').textContent = data.contact.phone;
+            const linkedinEl = document.getElementById('cv-linkedin');
+            linkedinEl.href = data.contact.linkedin.url;
+            linkedinEl.textContent = data.contact.linkedin.text;
+            
+            // Languages
+            document.getElementById('languages-label').textContent = data.languages.label;
+            document.getElementById('languages-list').innerHTML = data.languages.list
+                .map(lang => `<p>${lang.flag} ${lang.name} — ${lang.level}</p>`)
+                .join('');
+            
+            // Experience
+            document.getElementById('experience-label').textContent = data.experience.label;
+            document.getElementById('experience-list').innerHTML = data.experience.items
+                .map(exp => `
+                    <div>
+                        <h3 class="font-semibold text-gray-900">${exp.position}</h3>
+                        <p class="text-gray-600">${exp.company}</p>
+                        <p class="text-sm text-gray-500 mb-2">${exp.period}</p>
+                        <ul class="text-gray-600 text-sm space-y-1">
+                            ${exp.tasks.map(task => `<li class="flex"><span class="mr-2">–</span><span>${task}</span></li>`).join('')}
+                        </ul>
+                    </div>
+                `).join('');
+            
+            // Education
+            document.getElementById('education-label').textContent = data.education.label;
+            document.getElementById('education-list').innerHTML = data.education.items
+                .map(edu => `
+                    <div>
+                        <h3 class="font-semibold text-gray-900">${edu.degree}</h3>
+                        <p class="text-gray-600">${edu.institution}</p>
+                        <p class="text-sm text-gray-500">${edu.period}</p>
+                    </div>
+                `).join('');
+            
+            // Courses
+            document.getElementById('courses-label').textContent = data.courses.label;
+            document.getElementById('courses-list').innerHTML = data.courses.items
+                .map(course => `
+                    <div>
+                        <h3 class="font-semibold text-gray-900">${course.name}</h3>
+                        <p class="text-gray-600">${course.institution}</p>
+                        <p class="text-sm text-gray-500">${course.date}</p>
+                    </div>
+                `).join('');
+            
+            // Technologies
+            document.getElementById('technologies-label').textContent = data.technologies.label;
+            document.getElementById('technologies-list').innerHTML = data.technologies.categories
+                .map(cat => `<p><strong>${cat.name}:</strong> ${cat.items}</p>`)
+                .join('');
+        }
+
+        function setLanguage(lang) {
+            currentLang = lang;
+            document.documentElement.lang = lang;
+            
+            // Update button styles
+            document.getElementById('lang-es').className = lang === 'es' 
+                ? 'px-3 py-1 rounded bg-gray-800 text-white text-sm hover:bg-gray-900 transition'
+                : 'px-3 py-1 rounded bg-gray-200 text-gray-700 text-sm hover:bg-gray-300 transition';
+            document.getElementById('lang-en').className = lang === 'en'
+                ? 'px-3 py-1 rounded bg-gray-800 text-white text-sm hover:bg-gray-900 transition'
+                : 'px-3 py-1 rounded bg-gray-200 text-gray-700 text-sm hover:bg-gray-300 transition';
+            
+            renderCV();
+        }
+
+        document.getElementById('lang-es').addEventListener('click', () => setLanguage('es'));
+        document.getElementById('lang-en').addEventListener('click', () => setLanguage('en'));
+
+        loadCV();
+    </script>
+</body>
+</html>

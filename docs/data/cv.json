@@ -1,0 +1,222 @@
+{
+  "es": {
+    "name": "Edgar Conde Nóvoa",
+    "title": "Ingeniero de Software",
+    "contact": {
+      "label": "Contacto",
+      "email": "edconde14@gmail.com",
+      "phone": "+34 XXX XXX XXX",
+      "linkedin": {
+        "url": "https://linkedin.com/in/edgarcondenovoa",
+        "text": "LinkedIn"
+      }
+    },
+    "languages": {
+      "label": "Idiomas",
+      "list": [
+        { "name": "Español", "level": "Nativo", "flag": "🇪🇸" },
+        { "name": "Gallego", "level": "Nativo", "flag": "<img src='assets/img/flag-galicia.svg' class='inline w-4 h-3' alt='Galicia'>" },
+        { "name": "Inglés", "level": "B2", "flag": "🇬🇧" }
+      ]
+    },
+    "experience": {
+      "label": "Experiencia Profesional",
+      "items": [
+        {
+          "position": "Ingeniero Senior de Datos y Software",
+          "company": "Departamento de Innovación, Tecnología e IA del Ayuntamiento de Ourense",
+          "period": "Mayo 2022 - Actualidad",
+          "tasks": [
+            "Desarrollo de sistemas de información integrales: Spring Boot, Hibernate, Angular, TypeScript, PostgreSQL",
+            "Integración con servicios de terceros",
+            "Ciclo de vida completo del software, desde la toma de requisitos al despliegue"
+          ]
+        },
+        {
+          "position": "Analista Programador - Sector Banca (ABANCA)",
+          "company": "Odeene Ingeniería",
+          "period": "Agosto 2019 - Abril 2022",
+          "tasks": [
+            "Diseño y construcción de un framework de desarrollo de APIs basado en librerías, siguiendo un diseño orientado a dominios: .NET Web API, C#",
+            "Desarrollo de APIs críticas para la banca online, reduciendo los tiempos de respuesta mediante caching y técnicas de paralelismo: Redis Cache, .NET Task Parallel Library",
+            "Monitorización de APIs: ElasticSearch, Logstash, Kibana"
+          ]
+        },
+        {
+          "position": "Desarrollador de Software - Sector Banca (ABANCA)",
+          "company": "Odeene Ingeniería",
+          "period": "Enero 2019 - Agosto 2019",
+          "tasks": [
+            "Desarrollo de micro-frontends con Angular, TypeScript, CSS",
+            "Integración con APIs bancarias",
+            "Desarrollo de librerías npm de componentes de UI"
+          ]
+        },
+        {
+          "position": "Desarrollador de Software - Sector Banca (Caixabank)",
+          "company": "Viewnext",
+          "period": "Enero 2018 - Enero 2019",
+          "tasks": [
+            "Desarrollo de software backend y frontend: Java, JS, CSS"
+          ]
+        },
+        {
+          "position": "Desarrollador de Software (Prácticas) - Sector Retail (Inditex)",
+          "company": "Viewnext",
+          "period": "Septiembre 2017 - Diciembre 2017",
+          "tasks": [
+            "Desarrollo de software backend y frontend: Spring Framework, JS, CSS"
+          ]
+        }
+      ]
+    },
+    "education": {
+      "label": "Formación Académica",
+      "items": [
+        {
+          "degree": "Máster en Ingeniería Informática",
+          "institution": "Universidad de Vigo",
+          "period": "2025 - Actualidad"
+        },
+        {
+          "degree": "Máster en Visual Analytics & Big Data",
+          "institution": "Universidad Internacional de La Rioja",
+          "period": "2020 - 2022"
+        },
+        {
+          "degree": "Grado en Ingeniería Informática",
+          "institution": "Universidad de Vigo — Especialidad en Ingeniería de Software",
+          "period": "2013 - 2018"
+        }
+      ]
+    },
+    "courses": {
+      "label": "Cursos y Certificaciones",
+      "items": [
+        { "date": "May 2021", "name": "Curso de Programación en Python", "institution": "Universidad Internacional de La Rioja (3ECTS)" },
+        { "date": "Jul 2019", "name": "Desarrollo de soluciones con Machine Learning", "institution": "Vitae Consultores" },
+        { "date": "Abr 2017", "name": "Introducción al Paralelismo", "institution": "Centro de Supercomputación de Galicia (CESGA)" }
+      ]
+    },
+    "technologies": {
+      "label": "Tecnologías",
+      "categories": [
+        { "name": "Backend", "items": "Spring Boot, Hibernate, .NET Web API, C#, Java" },
+        { "name": "Frontend", "items": "Angular, TypeScript, JavaScript, CSS" },
+        { "name": "Bases de datos", "items": "PostgreSQL, Redis Cache" },
+        { "name": "Monitorización", "items": "ElasticSearch, Logstash, Kibana" },
+        { "name": "Metodologías", "items": "Ciclo de vida completo del software, AI-driven development" }
+      ]
+    }
+  },
+  "en": {
+    "name": "Edgar Conde Nóvoa",
+    "title": "Software Engineer",
+    "contact": {
+      "label": "Contact",
+      "email": "edconde14@gmail.com",
+      "phone": "+34 XXX XXX XXX",
+      "linkedin": {
+        "url": "https://linkedin.com/in/edgarcondenovoa",
+        "text": "LinkedIn"
+      }
+    },
+    "languages": {
+      "label": "Languages",
+      "list": [
+        { "name": "Spanish", "level": "Native", "flag": "🇪🇸" },
+        { "name": "Galician", "level": "Native", "flag": "<img src='assets/img/flag-galicia.svg' class='inline w-4 h-3' alt='Galicia'>" },
+        { "name": "English", "level": "B2", "flag": "🇬🇧" }
+      ]
+    },
+    "experience": {
+      "label": "Professional Experience",
+      "items": [
+        {
+          "position": "Senior Data and Software Engineer",
+          "company": "Department of Innovation, Technology and AI at Ourense City Council",
+          "period": "May 2022 - Present",
+          "tasks": [
+            "Development of comprehensive information systems: Spring Boot, Hibernate, Angular, TypeScript, PostgreSQL",
+            "Integration with third-party services",
+            "Full software lifecycle, from requirements gathering to deployment"
+          ]
+        },
+        {
+          "position": "Software Analyst - Banking Sector (ABANCA)",
+          "company": "Odeene Ingeniería",
+          "period": "August 2019 - April 2022",
+          "tasks": [
+            "Design and construction of a library-based API development framework, following domain-driven design: .NET Web API, C#",
+            "Development of critical APIs for online banking, reducing response times through caching and parallelism techniques: Redis Cache, .NET Task Parallel Library",
+            "API monitoring: ElasticSearch, Logstash, Kibana"
+          ]
+        },
+        {
+          "position": "Software Developer - Banking Sector (ABANCA)",
+          "company": "Odeene Ingeniería",
+          "period": "January 2019 - August 2019",
+          "tasks": [
+            "Development of micro-frontends with Angular, TypeScript, CSS",
+            "Integration with banking APIs",
+            "Development of npm UI component libraries"
+          ]
+        },
+        {
+          "position": "Software Developer - Banking Sector (Caixabank)",
+          "company": "Viewnext",
+          "period": "January 2018 - January 2019",
+          "tasks": [
+            "Backend and frontend software development: Java, JS, CSS"
+          ]
+        },
+        {
+          "position": "Software Developer (Internship) - Retail Sector (Inditex)",
+          "company": "Viewnext",
+          "period": "September 2017 - December 2017",
+          "tasks": [
+            "Backend and frontend software development: Spring Framework, JS, CSS"
+          ]
+        }
+      ]
+    },
+    "education": {
+      "label": "Education",
+      "items": [
+        {
+          "degree": "Master's in Computer Engineering",
+          "institution": "University of Vigo",
+          "period": "2025 - Present"
+        },
+        {
+          "degree": "Master's in Visual Analytics & Big Data",
+          "institution": "Universidad Internacional de La Rioja",
+          "period": "2020 - 2022"
+        },
+        {
+          "degree": "Bachelor's in Computer Engineering",
+          "institution": "University of Vigo — Software Engineering Specialization",
+          "period": "2013 - 2018"
+        }
+      ]
+    },
+    "courses": {
+      "label": "Courses and Certifications",
+      "items": [
+        { "date": "May 2021", "name": "Python Programming Course", "institution": "Universidad Internacional de La Rioja (3ECTS)" },
+        { "date": "Jul 2019", "name": "Machine Learning Solutions Development", "institution": "Vitae Consultores" },
+        { "date": "Apr 2017", "name": "Introduction to Parallelism", "institution": "Galicia Supercomputing Center (CESGA)" }
+      ]
+    },
+    "technologies": {
+      "label": "Technologies",
+      "categories": [
+        { "name": "Backend", "items": "Spring Boot, Hibernate, .NET Web API, C#, Java" },
+        { "name": "Frontend", "items": "Angular, TypeScript, JavaScript, CSS" },
+        { "name": "Databases", "items": "PostgreSQL, Redis Cache" },
+        { "name": "Monitoring", "items": "ElasticSearch, Logstash, Kibana" },
+        { "name": "Methodologies", "items": "Full software lifecycle, AI-driven development" }
+      ]
+    }
+  }
+}
