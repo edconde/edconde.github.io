@@ -243,6 +243,7 @@ async function loadEducation() {
                         </div>
                     </div>
                     <p class="text-gray-700 dark:text-gray-300 mb-4">${edu['field' + suffix]}</p>
+                    ${edu.thesis ? `
                     <div class="mt-4">
                         <h4 class="font-semibold mb-2 text-gray-900 dark:text-white flex items-center">
                             <i class="fas fa-book text-indigo-500 dark:text-indigo-400 mr-2"></i>${translate('sections.finalProject')}
@@ -255,6 +256,7 @@ async function loadEducation() {
                             </a>
                         </div>
                     </div>
+                    ` : ''}
                 </div>
             `;
             container.insertAdjacentHTML('beforeend', educationCard);
@@ -333,13 +335,13 @@ async function loadProjects() {
 
                         <div class="flex flex-col gap-3 mb-6">
                             ${project.websiteUrl ? `
-                                <a href="${project.websiteUrl}" target="_blank" 
+                                <a href="${project.websiteUrl}" target="_blank" onclick="event.stopPropagation()"
                                    class="inline-flex items-center text-indigo-700 dark:text-indigo-400 hover:text-indigo-900 dark:hover:text-indigo-300 font-medium">
                                     <i class="fas fa-globe mr-2"></i> ${translate('sections.websiteDemo')}
                                 </a>
                             ` : ''}
                             ${project.githubUrl ? `
-                                <a href="${project.githubUrl}" target="_blank" 
+                                <a href="${project.githubUrl}" target="_blank" onclick="event.stopPropagation()"
                                    class="inline-flex items-center text-indigo-700 dark:text-indigo-400 hover:text-indigo-900 dark:hover:text-indigo-300 font-medium">
                                     <i class="fab fa-github mr-2"></i> ${translate('sections.viewGithub')}
                                 </a>

@@ -1,6 +1,17 @@
 {
   "education": [
     {
+      "degree": "MÁSTER EN INGENIERÍA INFORMÁTICA",
+      "degree_en": "MASTER'S DEGREE IN COMPUTER ENGINEERING",
+      "institution": "UNIVERSIDAD DE VIGO",
+      "institution_en": "UNIVERSITY OF VIGO",
+      "period": "2025 - Presente",
+      "period_en": "2025 - Present",
+      "field": "Ciencias de la Computación y Tecnologías de la Información",
+      "field_en": "Computer Science and Information Technology",
+      "thesis": null
+    },
+    {
       "degree": "MÁSTER EN ANÁLISIS Y VISUALIZACIÓN DE BIG DATA",
       "degree_en": "MASTER'S DEGREE IN BIG DATA ANALYSIS AND VISUALIZATION",
       "institution": "UNIVERSIDAD INTERNACIONAL DE LA RIOJA",
@@ -23,8 +34,8 @@
       "institution_en": "UNIVERSITY OF VIGO",
       "period": "2013 - 2018",
       "period_en": "2013 - 2018",
-      "field": "Ciencias de la Computación y la Información - Mención en Ingeniería de Software",
-      "field_en": "Computer Science and Information - Software Engineering Major",
+      "field": "Ciencias de la Computación y Tecnologías de la Información - Mención en Ingeniería de Software",
+      "field_en": "Computer Science and Information Technology - Software Engineering Major",
       "thesis": {
         "title": "Aplicación para el Seguimiento de Pruebas de Atletismo",
         "title_en": "Athletic Event Tracking Application",

@@ -1,6 +1,34 @@
 {
   "projects": [
     {
+      "name": "Software de gestión de clínica dental",
+      "name_en": "Dental Clinic Management Software",
+      "icon": "fas fa-teeth",
+      "description": "Software de gestión integral para clínicas dentales, que permite la administración de citas, pacientes, empleados, servicios...",
+      "description_en": "Comprehensive management software for dental clinics, allowing the administration of appointments, patients, employees, services...",
+      "technologies": ["Spring Boot", "React", "PrimeReact", "Github Copilot", "PostgreSQL"],
+      "githubUrl": "https://github.com/edconde/clinica3s",
+      "websiteUrl": "https://clinica3s-frontend.onrender.com",
+      "startYear": 2025,
+      "endYear": 2025,
+      "showDemos": false,
+      "image": "assets/img/projects/Gemini_Generated_Image_clinica.jpg"
+    },
+    {
+      "name": "Aplicación de Blog Web con tutorial de desarrollo",
+      "name_en": "Web Blog Application with development tutorial",
+      "icon": "fas fa-message",
+      "description": "Aplicación web de blog de artículos, con CRUD de artículos, autenticación de usuarios, comentarios, etc. Incluye un tutorial detallado sobre cómo desarrollar la aplicación desde cero.",
+      "description_en": "Web blog application with CRUD for articles, user authentication, comments, etc. Includes a detailed tutorial on how to develop the application from scratch.",
+      "technologies": ["PHP", "JS", "MySQL", "Github Copilot"],
+      "githubUrl": "https://github.com/edconde/G4-blog",
+      "websiteUrl": "https://edconde.github.io/G4-blog",
+      "startYear": 2025,
+      "endYear": 2025,
+      "showDemos": false,
+      "image": "assets/img/projects/Gemini_Generated_Image_blog.jpg"
+    },
+    {
       "name": "Web estática personal (la que estás viendo)",
       "name_en": "Personal static website (the one you are viewing)",
       "icon": "fas fa-globe",
@@ -10,7 +38,7 @@
       "githubUrl": "https://github.com/edconde/edconde.github.io",
       "websiteUrl": "https://edconde.github.io",
       "startYear": 2025,
-      "endYear": null,
+      "endYear": 2025,
       "showDemos": false,
       "image": "assets/img/projects/Gemini_Generated_Image_portfolio.jpg"
     },
@@ -29,8 +57,8 @@
       "image": "assets/img/projects/Gemini_Generated_Image_cmd.jpg"
     },
     {
-      "name": "Concello de Ourense",
-      "name_en": "Concello de Ourense",
+      "name": "App Concello de Ourense",
+      "name_en": "Ourense City Council App",
       "icon": "fas fa-mobile",
       "description": "Aplicación móvil oficial del Ayuntamiento de Ourense. Cuenta con notificaciones push y permite la consulta de información relativa a la ciudad (noticias, eventos, líneas de bus...). Disponible para Android e iOS.",
       "description_en": "Official mobile app of Ourense City Council. It features push notifications and allows you to view city-related information (news, events, bus routes, etc.). Available for Android and iOS.",
