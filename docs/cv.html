@@ -19,6 +19,19 @@
                 grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
             }
         }
+        .editable-field {
+            cursor: pointer;
+            border-bottom: 1px dashed transparent;
+            transition: border-color 0.2s;
+        }
+        .editable-field:hover {
+            border-bottom-color: #9ca3af;
+        }
+        @media print {
+            .editable-field {
+                border-bottom: none !important;
+            }
+        }
     </style>
 </head>
 <body class="bg-white text-gray-800">
@@ -33,9 +46,14 @@
 
     <div class="max-w-4xl mx-auto p-8">
         <!-- Header -->
-        <header class="border-b-2 border-gray-800 pb-4 mb-6">
-            <h1 id="cv-name" class="text-3xl font-bold text-gray-900"></h1>
-            <p id="cv-title" class="text-xl text-gray-600 mt-1"></p>
+        <header class="border-b-2 border-gray-800 pb-4 mb-6 flex items-center gap-6">
+            <img id="cv-photo" src="assets/img/logo.jpg" alt="Foto de perfil" class="w-24 h-24 rounded-full object-cover cursor-pointer no-print-edit" title="Click para cambiar foto">
+            <div>
+                <h1 id="cv-name" class="text-3xl font-bold text-gray-900"></h1>
+                <p id="cv-title" class="text-xl text-gray-600 mt-1"></p>
+            </div>
+            <!-- Input oculto para cambiar foto -->
+            <input type="file" id="photo-input" accept="image/*" class="hidden">
         </header>
 
         <!-- Info Grid: Contact & Languages -->
@@ -44,8 +62,8 @@
             <div>
                 <h2 id="contact-label" class="text-lg font-semibold text-gray-900 mb-2"></h2>
                 <div class="text-gray-600 space-y-1">
-                    <p>📧 <span id="cv-email"></span></p>
-                    <p>📱 <span id="cv-phone"></span></p>
+                    <p>📧 <span id="cv-email" class="editable-field" title="Click para editar"></span></p>
+                    <p>📱 <span id="cv-phone" class="editable-field" title="Click para editar"></span></p>
                     <p>🔗 <a id="cv-linkedin" href="#" class="text-gray-800 hover:underline" target="_blank"></a></p>
                 </div>
             </div>
@@ -172,6 +190,70 @@
 
         document.getElementById('lang-es').addEventListener('click', () => setLanguage('es'));
         document.getElementById('lang-en').addEventListener('click', () => setLanguage('en'));
+
+        // Editable fields functionality
+        function makeEditable(elementId) {
+            const element = document.getElementById(elementId);
+            let isEditing = false;
+            
+            element.addEventListener('click', function() {
+                if (isEditing) return;
+                isEditing = true;
+                
+                const currentValue = this.textContent;
+                const input = document.createElement('input');
+                input.type = 'text';
+                input.value = currentValue;
+                input.className = 'border border-gray-300 rounded px-2 py-1 text-sm focus:outline-none focus:border-gray-500';
+                input.style.width = Math.max(150, currentValue.length * 8) + 'px';
+                
+                const finishEditing = () => {
+                    if (!isEditing) return;
+                    const newValue = input.value.trim() || currentValue;
+                    this.textContent = newValue;
+                    this.style.display = '';
+                    input.remove();
+                    isEditing = false;
+                };
+                
+                input.addEventListener('blur', finishEditing);
+                input.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter') {
+                        e.preventDefault();
+                        input.blur();
+                    }
+                    if (e.key === 'Escape') {
+                        input.value = currentValue;
+                        input.blur();
+                    }
+                });
+                
+                this.style.display = 'none';
+                this.parentNode.insertBefore(input, this.nextSibling);
+                input.focus();
+                input.select();
+            });
+        }
+        
+        makeEditable('cv-email');
+        makeEditable('cv-phone');
+        
+        // Photo change functionality
+        const photoEl = document.getElementById('cv-photo');
+        const photoInput = document.getElementById('photo-input');
+        
+        photoEl.addEventListener('click', () => photoInput.click());
+        
+        photoInput.addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    photoEl.src = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        });
 
         loadCV();
     </script>
