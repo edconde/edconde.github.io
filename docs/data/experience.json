@@ -11,16 +11,16 @@
       "location_en": "Ourense, Spain",
       "description": "Creación de Sistemas de Información y Aplicaciones, desde la toma de requisitos hasta la puesta en producción.",
       "description_en": "Creation of Information Systems and Applications, from requirements gathering to production deployment.",
-      "technologies": ["Data Engineering", "Software Engineering", "IA", "Innovación"],
+      "technologies": ["Spring Boot", "Hibernate", "Angular", "TypeScript", "PostgreSQL"],
       "funciones": [
-        "Desarrollo de sistemas de información integrales",
-        "Implementación de soluciones innovadoras",
-        "Gestión de proyectos de tecnología"
+        "Desarrollo de software",
+        "Diseño de sistemas de información integrales",
+        "Digitalización de procesos administrativos"
       ],
       "funciones_en": [
+        "Software development",
         "Development of comprehensive information systems",
-        "Implementation of innovative solutions",
-        "Management of technology projects"
+        "Digitization of administrative processes"
       ]
     },
     {

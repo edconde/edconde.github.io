@@ -39,7 +39,7 @@
           "tasks": [
             "Diseño y construcción de un framework de desarrollo de APIs basado en librerías, siguiendo un diseño orientado a dominios: .NET Web API, C#",
             "Desarrollo de APIs críticas para la banca online, reduciendo los tiempos de respuesta mediante caching y técnicas de paralelismo: Redis Cache, .NET Task Parallel Library",
-            "Monitorización de APIs: ElasticSearch, Logstash, Kibana"
+            "Desarrollo de micro-frontends con Angular, TypeScript, CSS"
           ]
         },
         {
@@ -149,7 +149,7 @@
           "tasks": [
             "Design and construction of a library-based API development framework, following domain-driven design: .NET Web API, C#",
             "Development of critical APIs for online banking, reducing response times through caching and parallelism techniques: Redis Cache, .NET Task Parallel Library",
-            "API monitoring: ElasticSearch, Logstash, Kibana"
+            "Development of micro-frontends with Angular, TypeScript, CSS"
           ]
         },
         {
